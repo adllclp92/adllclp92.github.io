@@ -1,0 +1,288 @@
+/* Amicale des locataires – le Clos La Paume
+   Couleurs reprises du logo */
+:root {
+  --navy: #0b3a8a;
+  --navy-deep: #082a66;
+  --blue: #0a6ed1;
+  --sky: #5aa9e9;
+  --sky-pale: #e8f3fd;
+  --green: #5aa33a;
+  --green-deep: #468a2a;
+  --sun: #fdd835;
+  --ink: #16233b;
+  --muted: #5b6b82;
+  --bg: #f6f9fd;
+  --card: #ffffff;
+  --line: #dbe6f3;
+  --radius: 18px;
+  --shadow: 0 1px 2px rgba(11, 58, 138, .06), 0 8px 24px rgba(11, 58, 138, .08);
+  --shadow-hover: 0 2px 4px rgba(11, 58, 138, .08), 0 16px 40px rgba(11, 58, 138, .16);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--blue); }
+h1, h2, h3 { font-family: "Ubuntu", "Nunito", sans-serif; line-height: 1.2; margin: 0; }
+.wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+
+.skip { position: absolute; left: -999px; top: 8px; background: var(--navy); color: #fff; padding: 8px 14px; border-radius: 8px; z-index: 100; }
+.skip:focus { left: 8px; }
+
+/* ---------- En-tête ---------- */
+.site-header {
+  position: relative;
+  padding: 40px 0 36px;
+  background: linear-gradient(180deg, #d9ecfc 0%, #eef6fe 60%, var(--bg) 100%);
+  overflow: hidden;
+}
+.header-sky { position: absolute; inset: 0; pointer-events: none; }
+.sun {
+  position: absolute; right: -80px; top: -110px; width: 320px; height: 320px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(253, 216, 53, .55) 0%, rgba(253, 216, 53, .18) 45%, transparent 70%);
+}
+.logo-card {
+  position: relative;
+  margin: 0 auto;
+  max-width: 980px;
+  background: #fff;
+  border-radius: 22px;
+  padding: clamp(10px, 2vw, 18px);
+  box-shadow: var(--shadow);
+}
+.logo-card img { width: 100%; height: auto; }
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(255, 255, 255, .86);
+  backdrop-filter: saturate(1.4) blur(12px);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+.nav-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.nav-links a {
+  display: block; padding: 8px 14px; border-radius: 999px;
+  font-weight: 700; color: var(--navy); text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.nav-links a:hover, .nav-links a.is-current { background: var(--sky-pale); color: var(--blue); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 999px; border: 0;
+  font: 800 .95rem/1 "Nunito", sans-serif; text-decoration: none; cursor: pointer;
+  transition: transform .15s, box-shadow .2s, background .2s;
+}
+.btn svg { width: 18px; height: 18px; fill: currentColor; }
+.btn-contact { background: var(--green); color: #fff; box-shadow: 0 6px 16px rgba(90, 163, 58, .35); white-space: nowrap; }
+.btn-contact:hover { background: var(--green-deep); transform: translateY(-1px); }
+.btn-light { background: #fff; color: var(--navy); box-shadow: none; }
+.btn-light:hover { background: var(--sun); color: var(--navy-deep); }
+.btn-outline { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 2px var(--line); }
+.btn-outline:hover { box-shadow: inset 0 0 0 2px var(--blue); color: var(--blue); }
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: var(--navy); }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+
+/* ---------- Bandeau ---------- */
+.bandeau {
+  background: var(--sun); color: var(--navy-deep);
+  text-align: center; font-weight: 800; padding: 10px 16px;
+}
+
+/* ---------- Accueil ---------- */
+.intro { margin-top: 36px; }
+.intro-card {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: clamp(22px, 4vw, 40px);
+  border-left: 6px solid var(--green);
+}
+.intro-card h2 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); }
+.intro-sub { margin: 6px 0 0; color: var(--blue); font-weight: 700; font-size: 1.1rem; }
+.intro-sub:empty { display: none; }
+.intro-texte { margin-top: 14px; color: var(--ink); max-width: 75ch; }
+.intro-texte p { margin: 0 0 .8em; }
+.intro-texte p:last-child { margin-bottom: 0; }
+
+/* ---------- Sections ---------- */
+.section { padding: 56px 0; }
+.section.wrap { padding-inline: 0; }
+.section-tint { background: linear-gradient(180deg, var(--sky-pale), #f3f8fe); }
+.section-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 28px; }
+.pill {
+  display: inline-block; color: #fff; font-size: clamp(1.4rem, 3vw, 1.9rem);
+  padding: 8px 22px 10px; border-radius: 14px;
+}
+.pill-green { background: var(--green); }
+.pill-blue { background: var(--blue); }
+.pill-navy { background: var(--navy); }
+.section-note { margin: 0; color: var(--muted); font-weight: 600; }
+
+.vide {
+  background: var(--card); border: 2px dashed var(--line); border-radius: var(--radius);
+  padding: 32px; text-align: center; color: var(--muted); font-weight: 600;
+}
+
+/* ---------- Affiches : ouvertes, les unes sous les autres ---------- */
+.liste-affiches { display: flex; flex-direction: column; align-items: center; gap: 40px; }
+.affiche {
+  width: 100%; max-width: 900px;
+  background: var(--card); border-radius: 22px; box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.affiche-tete { padding: 20px 24px 16px; border-top: 6px solid var(--green); }
+.affiche-tete h3 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); color: var(--navy); margin-top: 2px; }
+.affiche-tete p { margin: 6px 0 0; color: var(--muted); }
+.affiche-visuel { background: #eef4fb; display: flex; flex-direction: column; gap: 4px; }
+.affiche-page { display: block; cursor: zoom-in; }
+.affiche-page img { width: 100%; height: auto; }
+.affiche-objet { display: block; width: 100%; height: min(1200px, 130vw); border: 0; }
+.affiche-pdf {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  min-height: 260px; text-decoration: none; font-weight: 800; color: var(--navy);
+}
+.affiche-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 24px 18px; }
+.date { font-size: .85rem; font-weight: 700; color: var(--green-deep); text-transform: uppercase; letter-spacing: .04em; }
+
+/* ---------- Gazette ---------- */
+.gazette-une {
+  display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center;
+  background: var(--card); border-radius: 22px; box-shadow: var(--shadow);
+  padding: clamp(20px, 3vw, 32px); margin-bottom: 24px;
+}
+.gazette-badge {
+  font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--navy-deep); background: var(--sun); padding: 4px 10px; border-radius: 999px;
+  display: inline-block; margin-bottom: 8px;
+}
+.gazette-une h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--navy); }
+.gazette-une p { margin: 8px 0 0; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.journal {
+  width: 120px; aspect-ratio: 3 / 4; border-radius: 10px; position: relative;
+  background: #fff; box-shadow: 0 10px 24px rgba(11, 58, 138, .18);
+  border-top: 14px solid var(--blue); display: grid; place-items: center; color: var(--navy);
+  font: 700 1.6rem "Ubuntu", sans-serif;
+}
+.journal::after {
+  content: ""; position: absolute; left: 14px; right: 14px; bottom: 16px; height: 22px;
+  background: repeating-linear-gradient(180deg, var(--line) 0 3px, transparent 3px 8px);
+}
+.journal small { position: absolute; top: 8px; font: 800 .6rem "Nunito", sans-serif; letter-spacing: .1em; color: var(--green-deep); }
+.grid-gazettes { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+.gazette {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 18px; display: flex; gap: 14px; align-items: flex-start;
+  transition: transform .2s, box-shadow .2s;
+}
+.gazette:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.gazette .journal { width: 56px; border-top-width: 8px; font-size: .95rem; border-radius: 6px; flex: none; }
+.gazette .journal::after, .gazette .journal small { display: none; }
+.gazette h3 { font-size: 1.02rem; color: var(--navy); }
+.gazette .liens { display: flex; gap: 12px; margin-top: 6px; font-weight: 700; font-size: .92rem; }
+.gazette .liens a { text-decoration: none; }
+.gazette .liens a:hover { text-decoration: underline; }
+
+/* ---------- Archives ---------- */
+.filtres { display: flex; gap: 8px; margin-bottom: 22px; flex-wrap: wrap; }
+.filtre {
+  font: 700 .95rem "Nunito", sans-serif; padding: 8px 16px; border-radius: 999px; cursor: pointer;
+  border: 2px solid var(--line); background: #fff; color: var(--navy);
+}
+.filtre.is-active { background: var(--navy); border-color: var(--navy); color: #fff; }
+.annee { margin: 26px 0 12px; font-size: 1.1rem; color: var(--navy); display: flex; align-items: center; gap: 12px; }
+.annee::after { content: ""; flex: 1; height: 2px; background: var(--line); }
+.liste-archives { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.archive {
+  display: flex; align-items: center; gap: 14px; background: var(--card);
+  border-radius: 14px; padding: 10px 14px; box-shadow: var(--shadow);
+  text-decoration: none; color: inherit; transition: box-shadow .2s;
+}
+.archive:hover { box-shadow: var(--shadow-hover); }
+.archive-vignette {
+  width: 48px; height: 60px; border-radius: 8px; flex: none; overflow: hidden;
+  background: var(--sky-pale); display: grid; place-items: center; color: var(--navy);
+  font: 800 .7rem "Nunito", sans-serif;
+}
+.archive-vignette img { width: 100%; height: 100%; object-fit: cover; }
+.archive-vignette.is-gazette { background: var(--blue); color: #fff; }
+.archive strong { display: block; color: var(--navy); line-height: 1.3; }
+.archive .meta { font-size: .85rem; color: var(--muted); }
+.tag { font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: 2px 8px; border-radius: 999px; margin-right: 6px; }
+.tag-affiche { background: #e4f3dc; color: var(--green-deep); }
+.tag-gazette { background: var(--sky-pale); color: var(--blue); }
+
+/* ---------- Pied de page ---------- */
+.footer { background: var(--navy); color: #dbe7fb; padding: 36px 0; margin-top: 24px; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.footer p { margin: 2px 0; }
+.footer-name { font: 700 1.1rem "Ubuntu", sans-serif; color: #fff; }
+.footer-small { font-size: .9rem; opacity: .85; }
+.footer-small:empty { display: none; }
+
+/* ---------- Compteur de visites ---------- */
+.compteur {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 12px !important;
+  background: rgba(255, 255, 255, .1); border-radius: 999px; padding: 4px 12px 4px 10px;
+  font-size: .88rem; font-weight: 700; color: #fff;
+}
+.compteur[hidden] { display: none; }
+.compteur svg { width: 18px; height: 18px; fill: var(--sun); }
+
+/* ---------- Fenêtre « Nous contacter » ---------- */
+.footer-mail { margin-top: 8px !important; }
+.footer-mail .email-texte { font-weight: 800; color: #fff; user-select: all; -webkit-user-select: all; }
+.contact-fenetre {
+  width: min(480px, calc(100% - 32px)); border: 0; border-radius: 22px; padding: 28px 26px 24px;
+  box-shadow: 0 24px 70px rgba(8, 26, 60, .35); color: var(--ink); overflow: visible;
+  border-top: 8px solid var(--green);
+}
+.contact-fenetre::backdrop { background: rgba(8, 26, 60, .6); }
+.contact-fenetre h2 { color: var(--navy); font-size: 1.5rem; margin-bottom: 6px; }
+.contact-fenetre p { margin: 6px 0; }
+.email-boite { display: flex; gap: 8px; margin: 12px 0 4px; flex-wrap: wrap; }
+.email-champ {
+  flex: 1 1 200px; min-width: 0; font: 800 1.1rem "Nunito", sans-serif; color: var(--navy);
+  background: var(--sky-pale); border: 2px solid var(--line); border-radius: 12px; padding: 10px 12px;
+  user-select: all; -webkit-user-select: all;
+}
+.email-champ:focus { outline: none; border-color: var(--blue); }
+.copie-ok { min-height: 1.4em; font-weight: 700; color: var(--green-deep); font-size: .92rem; }
+.contact-fenetre .btn-contact { margin-top: 6px; }
+.contact-aide { font-size: .85rem; color: var(--muted); margin-top: 14px !important; }
+.fermer {
+  position: absolute; top: 10px; right: 10px; width: 38px; height: 38px; border-radius: 50%;
+  border: 0; background: var(--sky-pale); color: var(--navy); font-size: 1.5rem; line-height: 1; cursor: pointer;
+}
+.fermer:hover { background: var(--line); }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .site-header { padding: 20px 0 22px; }
+  .nav-inner { min-height: 56px; }
+  .nav-links a { padding: 6px 10px; font-size: .92rem; }
+  .gazette-une { grid-template-columns: 1fr; }
+  .gazette-une .journal { width: 90px; }
+  .liste-archives { grid-template-columns: 1fr; }
+  .affiche-tete { padding: 16px 16px 12px; }
+  .affiche-actions { padding: 12px 16px 16px; }
+}
+@media (max-width: 480px) {
+  .nav-links a { padding: 6px 8px; }
+  #contact-nav { padding: 10px; }
+  #contact-nav .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

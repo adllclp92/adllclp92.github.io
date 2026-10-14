@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amicale des locataires – Le Clos La Paume</title>
+  <meta name="description" content="Site de l'Amicale des locataires du Clos La Paume à Bagneux – association régie par la loi de 1901 : affiches, gazette et archives.">
+  <link rel="icon" type="image/png" href="assets/icone.png">
+  <link rel="apple-touch-icon" href="assets/icone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <a class="skip" href="#a-la-une">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="header-sky" aria-hidden="true"><span class="sun"></span></div>
+    <div class="wrap">
+      <h1 class="logo-card">
+        <img src="assets/logo.png" alt="Amicale des locataires le Clos La Paume – 8, rue du Clos la Paume – 92220 Bagneux – Association régie par la loi de 1901" width="1400" height="358">
+      </h1>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="Navigation principale">
+    <div class="wrap nav-inner">
+      <ul class="nav-links">
+        <li><a href="#a-la-une">À la une</a></li>
+        <li><a href="#la-gazette">La gazette</a></li>
+        <li><a href="#archives">Archives</a></li>
+      </ul>
+      <a class="btn btn-contact" id="contact-nav" href="mailto:amicalelapaume@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.2-.5 6.8 5.3L18.8 6H5.2ZM19 7.9l-6.4 5a1 1 0 0 1-1.2 0L5 7.9v9.6c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V7.9Z"/></svg>
+        <span class="lbl">Nous contacter</span>
+      </a>
+    </div>
+  </nav>
+
+  <div id="bandeau" class="bandeau" hidden></div>
+
+  <main>
+    <section class="intro wrap" aria-labelledby="intro-titre">
+      <div class="intro-card">
+        <h2 id="intro-titre">Bienvenue</h2>
+        <p class="intro-sub" id="intro-sous-titre"></p>
+        <div id="intro-texte" class="intro-texte"></div>
+      </div>
+    </section>
+
+    <section id="a-la-une" class="section wrap" aria-labelledby="t-une">
+      <div class="section-head">
+        <h2 id="t-une" class="pill pill-green">À la une</h2>
+        <p class="section-note">Les dernières informations de l'amicale</p>
+      </div>
+      <div id="affiches" class="liste-affiches"></div>
+    </section>
+
+    <section id="la-gazette" class="section section-tint" aria-labelledby="t-gazette">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="t-gazette" class="pill pill-blue">La gazette</h2>
+          <p class="section-note">Le journal de l'amicale, à lire en ligne ou à télécharger</p>
+        </div>
+        <div id="gazettes"></div>
+      </div>
+    </section>
+
+    <section id="archives" class="section wrap" aria-labelledby="t-archives">
+      <div class="section-head">
+        <h2 id="t-archives" class="pill pill-navy">Archives</h2>
+        <p class="section-note">Les anciennes affiches et gazettes</p>
+      </div>
+      <div class="filtres" role="tablist" aria-label="Filtrer les archives">
+        <button class="filtre is-active" data-filtre="tout" role="tab" aria-selected="true">Tout</button>
+        <button class="filtre" data-filtre="affiche" role="tab" aria-selected="false">Affiches</button>
+        <button class="filtre" data-filtre="gazette" role="tab" aria-selected="false">Gazettes</button>
+      </div>
+      <div id="liste-archives"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-name">Amicale des locataires — le Clos La Paume</p>
+        <p>8, rue du Clos la Paume — 92220 Bagneux</p>
+        <p class="footer-small">Association régie par la loi de 1901</p>
+        <p class="footer-mail">E-mail : <span class="email-texte">amicalelapaume@gmail.com</span></p>
+        <p class="footer-small" id="pied-texte"></p>
+        <p class="compteur" id="compteur" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7Zm0 2.2c-3.5 0-6.6 2.9-7.7 4.8 1.1 1.9 4.2 4.8 7.7 4.8s6.6-2.9 7.7-4.8c-1.1-1.9-4.2-4.8-7.7-4.8Zm0 1.8a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/></svg>
+          <span id="compteur-valeur"></span>
+        </p>
+      </div>
+      <a class="btn btn-contact btn-light" id="contact-footer" href="mailto:amicalelapaume@gmail.com">Nous contacter</a>
+    </div>
+  </footer>
+
+  <dialog id="contact-fenetre" class="contact-fenetre" aria-labelledby="contact-titre">
+    <button class="fermer" type="button" aria-label="Fermer">×</button>
+    <h2 id="contact-titre">Nous contacter</h2>
+    <p>Écrivez à l'amicale à cette adresse&nbsp;:</p>
+    <div class="email-boite">
+      <input id="contact-email" class="email-champ" type="text" readonly value="amicalelapaume@gmail.com" aria-label="Adresse e-mail de l'amicale">
+      <button id="contact-copier" class="btn btn-primary" type="button">Copier</button>
+    </div>
+    <p id="contact-copie-ok" class="copie-ok" role="status" aria-live="polite"></p>
+    <a id="contact-ecrire" class="btn btn-contact" href="mailto:amicalelapaume@gmail.com">Écrire un e-mail</a>
+    <p class="contact-aide">Le bouton « Écrire un e-mail » ouvre votre messagerie. Si rien ne se passe, copiez l'adresse et collez-la dans votre messagerie habituelle (Gmail, Outlook…).</p>
+  </dialog>
+
+  <script src="data/content.js?v=20261014154034"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>
