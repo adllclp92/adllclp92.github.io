@@ -126,6 +126,7 @@ h1, h2, h3 { font-family: "Ubuntu", "Nunito", sans-serif; line-height: 1.2; marg
 .pill-green { background: var(--green); }
 .pill-blue { background: var(--blue); }
 .pill-navy { background: var(--navy); }
+.pill-important { background: var(--sun); color: var(--navy-deep); }
 .section-note { margin: 0; color: var(--muted); font-weight: 600; }
 
 .vide {
@@ -143,7 +144,7 @@ h1, h2, h3 { font-family: "Ubuntu", "Nunito", sans-serif; line-height: 1.2; marg
 .affiche-tete { padding: 20px 24px 16px; border-top: 6px solid var(--green); }
 .affiche-tete h3 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); color: var(--navy); margin-top: 2px; }
 .affiche-tete p { margin: 6px 0 0; color: var(--muted); }
-.affiche-visuel { background: #eef4fb; }
+.affiche-visuel { background: #eef4fb; display: flex; flex-direction: column; gap: 6px; }
 .affiche-page { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
 .affiche-page img { width: 100%; height: auto; display: block; }
 .affiche-objet { display: block; width: 100%; height: min(1200px, 130vw); border: 0; }
@@ -155,17 +156,7 @@ h1, h2, h3 { font-family: "Ubuntu", "Nunito", sans-serif; line-height: 1.2; marg
 .btn-ecran svg { width: 18px; height: 18px; }
 .date { font-size: .85rem; font-weight: 700; color: var(--green-deep); text-transform: uppercase; letter-spacing: .04em; }
 
-/* ---------- Carrousel ---------- */
-.carrousel { position: relative; background: #eef4fb; }
-.car-piste {
-  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
-  scrollbar-width: none; -webkit-overflow-scrolling: touch;
-}
-.car-piste::-webkit-scrollbar { display: none; }
-.car-piste:focus-visible { outline: 3px solid var(--sun); outline-offset: -3px; }
-.car-diapo { flex: 0 0 100%; scroll-snap-align: center; scroll-snap-stop: always; display: flex; align-items: center; justify-content: center; }
-.car-img { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
-.car-img img { width: 100%; height: auto; display: block; }
+/* ---------- Flèches (visualiseur) ---------- */
 .car-fleche {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
   width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer;
@@ -178,15 +169,6 @@ h1, h2, h3 { font-family: "Ubuntu", "Nunito", sans-serif; line-height: 1.2; marg
 .car-fleche:disabled { opacity: .3; cursor: default; }
 .car-prec { left: 12px; }
 .car-suiv { right: 12px; }
-.car-bas { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 12px 16px; background: #fff; flex-wrap: wrap; }
-.car-compteur { font-weight: 800; color: var(--navy); font-size: .92rem; min-width: 5.5em; text-align: center; }
-.car-points { display: flex; gap: 4px; }
-.car-point { width: 22px; height: 22px; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
-.car-point::before {
-  content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--line);
-  transition: background .2s, transform .2s;
-}
-.car-point.is-active::before { background: var(--green); transform: scale(1.35); }
 
 /* ---------- Visualiseur plein écran ---------- */
 html.viewer-ouvert { overflow: hidden; }
@@ -409,4 +391,33 @@ html.viewer-ouvert { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+}
+
+
+/* ---------- Information importante ---------- */
+.important { padding-top: 28px; }
+.important .liste-affiches {
+  background: linear-gradient(135deg, #fff8cf, #ffeb7a); border: 2px solid var(--sun);
+  border-radius: 28px; padding: 22px; box-shadow: var(--shadow);
+}
+.important .affiche-tete { border-top-color: var(--sun); }
+
+/* ---------- Lien vers les archives ---------- */
+.archives-carte {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap; text-decoration: none;
+  background: var(--navy); color: #fff; border-radius: 22px; padding: 20px 26px; box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .2s;
+}
+.archives-carte:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.archives-carte .pill { background: var(--sun); color: var(--navy-deep); }
+.archives-texte { display: flex; flex-direction: column; flex: 1; min-width: 220px; gap: 2px; }
+.archives-texte span { color: #dbe7fb; font-size: .92rem; }
+.archives-fleche { font-size: 1.8rem; font-weight: 800; color: var(--sun); }
+
+/* ---------- Page Archives ---------- */
+.page-archives { padding-top: 28px; padding-bottom: 50px; min-height: 55vh; }
+.nav-retour { font-weight: 800; color: var(--navy); text-decoration: none; }
+.nav-retour:hover { color: var(--blue); }
+@media (max-width: 640px) {
+  .important .liste-affiches { padding: 10px; border-radius: 20px; }
 }

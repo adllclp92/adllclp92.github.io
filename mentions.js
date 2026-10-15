@@ -43,14 +43,16 @@
       "au-delà de la consultation et de la copie à usage privé, nécessitent l'accord préalable de l'association " +
       "(contact : " + mail + ").</p>"],
     ["Données personnelles et cookies",
-      "<p>Ce site ne comporte aucun formulaire, aucun compte utilisateur, aucun cookie publicitaire et aucun outil de suivi.</p>" +
+      "<p>Ce site ne comporte aucun formulaire, aucun compte utilisateur, aucun cookie et aucun outil publicitaire.</p>" +
       (compteurActif
-        ? "<p><strong>Compteur de visites.</strong> Le site affiche un nombre de visites au moyen du service tiers " +
-          "<em>Abacus</em> (abacus.jasoncameron.dev). Seul un total anonyme est conservé : l'amicale n'a accès à aucune " +
-          "donnée permettant d'identifier un visiteur. Pour ne compter qu'une fois un même navigateur par jour, la date " +
-          "de la dernière visite est mémorisée dans le stockage local de votre navigateur ; elle ne contient aucune donnée " +
-          "personnelle et vous pouvez l'effacer à tout moment dans les réglages de votre navigateur. Comme pour toute " +
-          "connexion à un service en ligne, l'adresse IP est transmise techniquement au service pour répondre à la requête.</p>"
+        ? "<p><strong>Mesure de fréquentation anonyme.</strong> Pour connaître l'audience du site, des compteurs agrégés sont " +
+          "incrémentés au moyen du service tiers <em>Abacus</em> (abacus.jasoncameron.dev) : nombre de visites par jour, " +
+          "type d'appareil utilisé (mobile, tablette ou ordinateur), pages et documents consultés, clics sur « Nous contacter » " +
+          "et téléchargements de PDF. Ces compteurs ne contiennent aucune donnée permettant d'identifier un visiteur ; " +
+          "l'amicale n'a accès qu'à des totaux. Pour ne compter qu'une fois un même navigateur par jour, la date de la " +
+          "dernière visite est mémorisée dans le stockage local de votre navigateur (aucune donnée personnelle) ; vous pouvez " +
+          "l'effacer à tout moment dans les réglages de votre navigateur. Comme pour toute connexion à un service en ligne, " +
+          "l'adresse IP est transmise techniquement au service pour répondre à la requête.</p>"
         : "") +
       "<p>Comme tout hébergeur, GitHub peut enregistrer des journaux techniques de connexion (dont l'adresse IP) selon sa " +
       '<a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">politique de confidentialité</a>.</p>' +
@@ -69,6 +71,8 @@
   document.getElementById("legal-contenu").innerHTML = sections.map(function (s) {
     return '<section class="legal-bloc"><h2>' + s[0] + "</h2>" + s[1] + "</section>";
   }).join("");
+
+  if (window.Suivi) window.Suivi.init("mentions");
 
   if (M.maj) {
     var d = new Date(M.maj + "T12:00:00");

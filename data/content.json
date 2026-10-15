@@ -4,14 +4,16 @@
     "sous_titre": "Ensemble pour bien vivre au Clos La Paume",
     "texte": "L'Amicale des locataires du Clos La Paume représente et défend les intérêts des habitants de la résidence auprès du bailleur.\n\nRetrouvez ici nos dernières informations, la gazette de l'amicale et toutes nos archives. Une question, une remarque ? N'hésitez pas à nous écrire.",
     "bandeau": "",
-    "pied": ""
+    "pied": "",
+    "important_titre": "Information importante"
   },
   "contact": "amicalelapaume@gmail.com",
   "compteur": {
     "actif": true,
     "espace": "amicale-clos-la-paume-bagneux",
     "cle": "visites-site",
-    "depart": 0
+    "depart": 0,
+    "suivi_depuis": "2026-10-15"
   },
   "affiches": [
     {
@@ -20,7 +22,8 @@
       "description": "",
       "id": "bf4f6ab588",
       "fichier": "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026.png",
-      "archive": false
+      "archive": false,
+      "ordre": 0
     }
   ],
   "gazettes": [
@@ -100,5 +103,10 @@
     "declaration": "",
     "complement": "",
     "maj": "2026-10-15"
+  },
+  "importantes": [],
+  "registre_gazettes": {
+    "e6f04c1f7c": "Gazette n°1",
+    "e0f222d036": "Gazette n°2"
   }
 }
