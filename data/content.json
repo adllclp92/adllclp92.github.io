@@ -17,7 +17,7 @@
   },
   "affiches": [
     {
-      "titre": "Assemblée générale du 5 nov 2026",
+      "titre": "Assemblée générale du 5 novembre 2026",
       "date": "2026-10-12",
       "description": "",
       "id": "e56efe1a3c",
@@ -107,6 +107,7 @@
   "importantes": [],
   "registre_gazettes": {
     "e6f04c1f7c": "Gazette n°1",
-    "e0f222d036": "Gazette n°2"
+    "e0f222d036": "Gazette n°2",
+    "97f374468f": "20260301-Gazette n°1"
   }
 }

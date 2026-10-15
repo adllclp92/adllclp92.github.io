@@ -62,7 +62,9 @@
         o.setAttribute("aria-selected", o === b ? "true" : "false");
       });
       rendre(b.getAttribute("data-filtre"));
+      A.reveler(".archive");
     });
   });
+  A.reveler(".archive");
   Suivi.init("archives");
 })();

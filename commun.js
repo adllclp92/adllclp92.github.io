@@ -40,6 +40,21 @@
       return oa !== ob ? oa - ob : A.parDate(a, b);
     });
   };
+  /* Apparition douce au défilement (désactivée si l'appareil demande moins d'animations) */
+  A.reveler = function (sel) {
+    var calme = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (calme || !("IntersectionObserver" in window)) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("is-visible"); obs.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -6% 0px" });
+    Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) {
+      if (el.classList.contains("reveal")) return;
+      el.classList.add("reveal");
+      obs.observe(el);
+    });
+  };
   A.email = D.contact || "amicalelapaume@gmail.com";
   A.mailto = "mailto:" + A.email + "?subject=" + encodeURIComponent("Contact depuis le site de l'amicale");
 

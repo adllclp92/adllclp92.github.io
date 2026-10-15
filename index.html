@@ -10,12 +10,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <a class="skip" href="#a-la-une">Aller au contenu</a>
 
-  <header class="site-header">
+  <header class="site-header site-header-compact">
     <div class="header-sky" aria-hidden="true"><span class="sun"></span></div>
     <div class="wrap">
       <h1 class="logo-card">
@@ -29,7 +29,6 @@
       <ul class="nav-links">
         <li id="nav-important" hidden><a class="nav-important" href="#important">Information importante</a></li>
         <li><a href="#a-la-une">À la une</a></li>
-        <li><a href="#la-gazette">La gazette</a></li>
         <li><a href="archives.html">Archives</a></li>
       </ul>
       <a class="btn btn-contact" id="contact-nav" href="mailto:amicalelapaume@gmail.com">
@@ -44,10 +43,20 @@
   <main>
 
     <section class="intro wrap" aria-labelledby="intro-titre">
-      <div class="intro-card">
-        <h2 id="intro-titre">Bienvenue</h2>
-        <p class="intro-sub" id="intro-sous-titre"></p>
-        <div id="intro-texte" class="intro-texte"></div>
+      <div class="intro-grid">
+        <div class="intro-card">
+          <h2 id="intro-titre">Bienvenue</h2>
+          <p class="intro-sub" id="intro-sous-titre"></p>
+          <div id="intro-texte" class="intro-texte"></div>
+        </div>
+        <aside class="intro-aside" aria-label="Accès rapides">
+          <div class="aside-card aside-contact">
+            <h3>Nous contacter</h3>
+            <p class="aside-mail email-texte"></p>
+            <a class="btn btn-contact" id="contact-aside" href="mailto:amicalelapaume@gmail.com">Écrire ou copier l'adresse</a>
+          </div>
+          <div class="aside-card aside-gazette" id="intro-gazette" hidden></div>
+        </aside>
       </div>
     </section>
 
@@ -65,17 +74,6 @@
       </div>
       <div id="affiches" class="liste-affiches"></div>
     </section>
-
-    <section id="la-gazette" class="section section-tint" aria-labelledby="t-gazette">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="t-gazette" class="pill pill-blue">La gazette</h2>
-          <p class="section-note">Le journal de l'amicale, à lire en ligne ou à télécharger</p>
-        </div>
-        <div id="gazettes"></div>
-      </div>
-    </section>
-
   </main>
 
   <footer class="footer">
@@ -128,10 +126,10 @@
     <p class="contact-aide">Le bouton « Écrire un e-mail » ouvre votre messagerie. Si rien ne se passe, copiez l'adresse et collez-la dans votre messagerie habituelle (Gmail, Outlook…).</p>
   </dialog>
 
-  <script src="data/content.js?v=20261015181606"></script>
-  <script src="commun.js?v=7"></script>
-  <script src="suivi.js?v=7"></script>
-  <script src="visionneuse.js?v=7"></script>
-  <script src="app.js?v=7"></script>
+  <script src="data/content.js?v=20261015184724"></script>
+  <script src="commun.js?v=8"></script>
+  <script src="suivi.js?v=8"></script>
+  <script src="visionneuse.js?v=8"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>

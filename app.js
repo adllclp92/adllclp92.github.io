@@ -27,7 +27,7 @@
   champ.size = Math.max(email.length, 10);
   $("contact-ecrire").href = A.mailto;
   Array.prototype.forEach.call(document.querySelectorAll(".email-texte"), function (el) { el.textContent = email; });
-  ["contact-nav", "contact-footer"].forEach(function (id) {
+  ["contact-nav", "contact-aside", "contact-footer"].forEach(function (id) {
     var lien = $(id);
     lien.href = A.mailto;
     lien.title = email;
@@ -83,52 +83,29 @@
 
   A.activerPdf(document);
 
-  /* ---------- La gazette (lecture en ligne avec le visualiseur) ---------- */
+  /* ---------- Dernier numéro de la gazette : encart en haut de page (lecture avec le visualiseur) ---------- */
   var gActives = actifs(D.gazettes).sort(A.parDate);
-  var zoneGaz = $("gazettes");
   function nbPages(pages) { return pages.length > 1 ? pages.length + " pages" : ""; }
-  function couverture(cle, g, pages, classe) {
-    if (pages.length) {
-      return '<button class="' + classe + '" type="button" data-doc="' + esc(cle) + '" data-page="0" aria-label="Lire « ' + esc(g.titre) + ' » en ligne">' +
-        '<img src="' + esc(url(pages[0])) + '" alt="Couverture de la gazette ' + esc(g.titre) + '" loading="lazy"></button>';
-    }
-    return '<div class="journal" aria-hidden="true">' + (classe === "gazette-couv" ? "<small>LA GAZETTE</small>" : "") + (g.numero ? esc(g.numero) : "") + "</div>";
-  }
-  if (!gActives.length) {
-    zoneGaz.innerHTML = '<p class="vide">Aucune gazette pour le moment.</p>';
-  } else {
+  if (gActives.length) {
     var g0 = gActives[0];
     var cle0 = "gazette:" + (g0.id || 0);
     var pages0 = Visionneuse.inscrire(cle0, g0);
     var infos0 = [g0.numero ? "Numéro " + esc(g0.numero) : "", g0.date ? esc(A.moisAnnee(g0.date)) : "", nbPages(pages0)].filter(Boolean).join(" · ");
-    var html = '<article class="gazette-une">' + couverture(cle0, g0, pages0, "gazette-couv") +
-      "<div><span class=\"gazette-badge\">Dernier numéro</span>" +
-      "<h3>" + esc(g0.titre) + "</h3>" +
-      "<p>" + infos0 + "</p>" +
-      (g0.description ? "<p>" + esc(g0.description) + "</p>" : "") +
-      '<div class="actions">' +
+    /* Encart « Dernier numéro » à côté du texte de bienvenue */
+    var ig = $("intro-gazette");
+    var cover = pages0.length
+      ? '<button class="aside-couv" type="button" data-doc="' + esc(cle0) + '" data-page="0" aria-label="Lire « ' + esc(g0.titre) + ' » en ligne"><img src="' + esc(url(pages0[0])) + '" alt="Couverture de ' + esc(g0.titre) + '"></button>'
+      : "";
+    ig.innerHTML = cover + "<div><span class=\"gazette-badge\">Dernier numéro</span><h3>" + esc(g0.titre) + "</h3>" +
+      (infos0 ? "<p>" + infos0 + "</p>" : "") +
       (pages0.length
         ? '<button class="btn btn-primary" type="button" data-doc="' + esc(cle0) + '" data-page="0">Lire en ligne</button>'
         : '<a class="btn btn-primary" href="' + esc(url(g0.fichier)) + '" target="_blank" rel="noopener">Lire la gazette</a>') +
-      '<a class="btn btn-outline" href="' + esc(url(g0.fichier)) + '" download>Télécharger (PDF)</a>' +
-      "</div></div></article>";
-    if (gActives.length > 1) {
-      html += '<div class="grid-gazettes">' + gActives.slice(1).map(function (g, k) {
-        var cle = "gazette:" + (g.id || (k + 1));
-        var pages = Visionneuse.inscrire(cle, g);
-        return '<article class="gazette">' + couverture(cle, g, pages, "gazette-mini") +
-          "<div><h3>" + esc(g.titre) + "</h3>" +
-          '<span class="date">' + esc(A.moisAnnee(g.date)) + (pages.length > 1 ? " · " + pages.length + " pages" : "") + "</span>" +
-          '<div class="liens">' +
-          (pages.length
-            ? '<button class="lien-bouton" type="button" data-doc="' + esc(cle) + '" data-page="0" aria-label="Lire « ' + esc(g.titre) + ' » en ligne">Lire</button>'
-            : '<a href="' + esc(url(g.fichier)) + '" target="_blank" rel="noopener">Lire</a>') +
-          '<a href="' + esc(url(g.fichier)) + '" download>Télécharger</a></div></div></article>';
-      }).join("") + "</div>";
-    }
-    zoneGaz.innerHTML = html;
+      (A.estPdf(g0.fichier) ? ' <a class="btn btn-outline" href="' + esc(url(g0.fichier)) + '" download>Télécharger (PDF)</a>' : "") + "</div>";
+    ig.hidden = false;
   }
 
+  A.reveler(".section, .affiche, .aside-card, .intro-card");
   Suivi.init("accueil");
 
   /* ---------- Menu actif au défilement ---------- */
@@ -142,6 +119,6 @@
         });
       });
     }, { rootMargin: "-40% 0px -55% 0px" });
-    (imp.length ? ["important"] : []).concat(["a-la-une", "la-gazette"]).forEach(function (id) { obs.observe($(id)); });
+    (imp.length ? ["important"] : []).concat(["a-la-une"]).forEach(function (id) { obs.observe($(id)); });
   }
 })();
