@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <a class="skip" href="#a-la-une">Aller au contenu</a>
@@ -89,6 +89,7 @@
         <p class="footer-small">Association régie par la loi de 1901</p>
         <p class="footer-mail">E-mail : <span class="email-texte">amicalelapaume@gmail.com</span></p>
         <p class="footer-small" id="pied-texte"></p>
+        <p class="footer-liens"><a href="mentions-legales.html">Mentions légales</a></p>
         <p class="compteur" id="compteur" hidden>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7Zm0 2.2c-3.5 0-6.6 2.9-7.7 4.8 1.1 1.9 4.2 4.8 7.7 4.8s6.6-2.9 7.7-4.8c-1.1-1.9-4.2-4.8-7.7-4.8Zm0 1.8a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/></svg>
           <span id="compteur-valeur"></span>
@@ -97,6 +98,25 @@
       <a class="btn btn-contact btn-light" id="contact-footer" href="mailto:amicalelapaume@gmail.com">Nous contacter</a>
     </div>
   </footer>
+
+  <dialog id="viewer" class="viewer" aria-label="Lecteur de document">
+    <div class="viewer-barre">
+      <p class="viewer-titre" id="viewer-titre"></p>
+      <span class="viewer-compteur" id="viewer-compteur" aria-live="polite"></span>
+      <button class="viewer-btn" id="viewer-zoom" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M10 4a6 6 0 0 1 4.8 9.6l4.8 4.8-1.4 1.4-4.8-4.8A6 6 0 1 1 10 4Zm0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-1 1.5h2V9h1.5v2H11v1.5H9V11H7.5V9H9V7.5Z"/></svg>
+        <span class="viewer-long">Zoom</span>
+      </button>
+      <a class="viewer-btn" id="viewer-pdf" href="#" download hidden aria-label="Télécharger le PDF"><span class="viewer-long">Télécharger (</span>PDF<span class="viewer-long">)</span></a>
+      <button class="viewer-btn viewer-fermer" id="viewer-fermer" type="button" aria-label="Fermer le lecteur">&times;</button>
+    </div>
+    <div class="viewer-scene">
+      <button class="car-fleche car-prec viewer-fleche" id="viewer-prec" type="button" aria-label="Page précédente">&#8249;</button>
+      <div class="viewer-defile" id="viewer-defile"><img id="viewer-img" alt="" decoding="async"></div>
+      <button class="car-fleche car-suiv viewer-fleche" id="viewer-suiv" type="button" aria-label="Page suivante">&#8250;</button>
+    </div>
+    <div class="viewer-vignettes" id="viewer-vignettes" aria-label="Pages du document" hidden></div>
+  </dialog>
 
   <dialog id="contact-fenetre" class="contact-fenetre" aria-labelledby="contact-titre">
     <button class="fermer" type="button" aria-label="Fermer">×</button>
@@ -111,7 +131,7 @@
     <p class="contact-aide">Le bouton « Écrire un e-mail » ouvre votre messagerie. Si rien ne se passe, copiez l'adresse et collez-la dans votre messagerie habituelle (Gmail, Outlook…).</p>
   </dialog>
 
-  <script src="data/content.js?v=20261014154034"></script>
-  <script src="app.js?v=4"></script>
+  <script src="data/content.js?v=20261015132036"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>

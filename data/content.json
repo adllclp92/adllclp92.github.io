@@ -32,7 +32,32 @@
       "id": "e6f04c1f7c",
       "fichier": "gazettes/20260301-gazette-n1.pdf",
       "archive": true,
-      "date_archivage": "2026-10-12"
+      "date_archivage": "2026-10-12",
+      "pages": [
+        "gazettes/20260301-gazette-n1-page1.jpg",
+        "gazettes/20260301-gazette-n1-page2.jpg",
+        "gazettes/20260301-gazette-n1-page3.jpg",
+        "gazettes/20260301-gazette-n1-page4.jpg",
+        "gazettes/20260301-gazette-n1-page5.jpg",
+        "gazettes/20260301-gazette-n1-page6.jpg",
+        "gazettes/20260301-gazette-n1-page7.jpg",
+        "gazettes/20260301-gazette-n1-page8.jpg",
+        "gazettes/20260301-gazette-n1-page9.jpg",
+        "gazettes/20260301-gazette-n1-page10.jpg",
+        "gazettes/20260301-gazette-n1-page11.jpg",
+        "gazettes/20260301-gazette-n1-page12.jpg",
+        "gazettes/20260301-gazette-n1-page13.jpg",
+        "gazettes/20260301-gazette-n1-page14.jpg",
+        "gazettes/20260301-gazette-n1-page15.jpg",
+        "gazettes/20260301-gazette-n1-page16.jpg",
+        "gazettes/20260301-gazette-n1-page17.jpg",
+        "gazettes/20260301-gazette-n1-page18.jpg",
+        "gazettes/20260301-gazette-n1-page19.jpg",
+        "gazettes/20260301-gazette-n1-page20.jpg",
+        "gazettes/20260301-gazette-n1-page21.jpg",
+        "gazettes/20260301-gazette-n1-page22.jpg",
+        "gazettes/20260301-gazette-n1-page23.jpg"
+      ]
     },
     {
       "titre": "Gazette n°2",
@@ -41,7 +66,39 @@
       "numero": "2",
       "id": "e0f222d036",
       "fichier": "gazettes/20260524-gazette-n2.pdf",
-      "archive": false
+      "archive": false,
+      "pages": [
+        "gazettes/20260524-gazette-n2-page1.jpg",
+        "gazettes/20260524-gazette-n2-page2.jpg",
+        "gazettes/20260524-gazette-n2-page3.jpg",
+        "gazettes/20260524-gazette-n2-page4.jpg",
+        "gazettes/20260524-gazette-n2-page5.jpg",
+        "gazettes/20260524-gazette-n2-page6.jpg",
+        "gazettes/20260524-gazette-n2-page7.jpg",
+        "gazettes/20260524-gazette-n2-page8.jpg",
+        "gazettes/20260524-gazette-n2-page9.jpg",
+        "gazettes/20260524-gazette-n2-page10.jpg",
+        "gazettes/20260524-gazette-n2-page11.jpg",
+        "gazettes/20260524-gazette-n2-page12.jpg",
+        "gazettes/20260524-gazette-n2-page13.jpg",
+        "gazettes/20260524-gazette-n2-page14.jpg",
+        "gazettes/20260524-gazette-n2-page15.jpg",
+        "gazettes/20260524-gazette-n2-page16.jpg",
+        "gazettes/20260524-gazette-n2-page17.jpg",
+        "gazettes/20260524-gazette-n2-page18.jpg",
+        "gazettes/20260524-gazette-n2-page19.jpg",
+        "gazettes/20260524-gazette-n2-page20.jpg"
+      ]
     }
-  ]
+  ],
+  "mentions": {
+    "association": "Amicale des locataires – le Clos La Paume",
+    "adresse": "8, rue du Clos la Paume – 92220 Bagneux",
+    "directeur": "",
+    "rna": "",
+    "siret": "",
+    "declaration": "",
+    "complement": "",
+    "maj": "2026-10-15"
+  }
 }
