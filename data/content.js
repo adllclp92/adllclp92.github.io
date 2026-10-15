@@ -17,10 +17,10 @@ window.SITE_DATA = {
   },
   "affiches": [
     {
-      "titre": "Assemblée générale du 5 novembre 2026",
+      "titre": "Assemblée générale du 5 nov 2026",
       "date": "2026-10-12",
       "description": "",
-      "id": "bf4f6ab588",
+      "id": "e56efe1a3c",
       "fichier": "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026.png",
       "archive": false,
       "ordre": 0

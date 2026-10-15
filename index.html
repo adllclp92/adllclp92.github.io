@@ -27,6 +27,7 @@
   <nav class="nav" aria-label="Navigation principale">
     <div class="wrap nav-inner">
       <ul class="nav-links">
+        <li id="nav-important" hidden><a class="nav-important" href="#important">Information importante</a></li>
         <li><a href="#a-la-une">À la une</a></li>
         <li><a href="#la-gazette">La gazette</a></li>
         <li><a href="archives.html">Archives</a></li>
@@ -42,18 +43,19 @@
 
   <main>
 
-    <section id="important" class="section wrap important" aria-labelledby="important-titre" hidden>
-      <div class="section-head">
-        <h2 id="important-titre" class="pill pill-important">Information importante</h2>
-      </div>
-      <div id="important-liste" class="liste-affiches"></div>
-    </section>
     <section class="intro wrap" aria-labelledby="intro-titre">
       <div class="intro-card">
         <h2 id="intro-titre">Bienvenue</h2>
         <p class="intro-sub" id="intro-sous-titre"></p>
         <div id="intro-texte" class="intro-texte"></div>
       </div>
+    </section>
+
+    <section id="important" class="section wrap important" aria-labelledby="important-titre" hidden>
+      <div class="section-head">
+        <h2 id="important-titre" class="pill pill-important">Information importante</h2>
+      </div>
+      <div id="important-liste" class="liste-affiches"></div>
     </section>
 
     <section id="a-la-une" class="section wrap" aria-labelledby="t-une">
@@ -74,13 +76,6 @@
       </div>
     </section>
 
-    <section class="section wrap" aria-label="Archives">
-      <a class="archives-carte" href="archives.html">
-        <span class="pill pill-navy">Archives</span>
-        <span class="archives-texte"><strong>Retrouvez les anciennes affiches et gazettes</strong><span id="archives-note">Les anciennes affiches et gazettes</span></span>
-        <span class="archives-fleche" aria-hidden="true">&rarr;</span>
-      </a>
-    </section>
   </main>
 
   <footer class="footer">
@@ -91,7 +86,7 @@
         <p class="footer-small">Association régie par la loi de 1901</p>
         <p class="footer-mail">E-mail : <span class="email-texte">amicalelapaume@gmail.com</span></p>
         <p class="footer-small" id="pied-texte"></p>
-        <p class="footer-liens"><a href="archives.html">Archives</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+        <p class="footer-liens"><a href="mentions-legales.html">Mentions légales</a></p>
         <p class="compteur" id="compteur" hidden>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7Zm0 2.2c-3.5 0-6.6 2.9-7.7 4.8 1.1 1.9 4.2 4.8 7.7 4.8s6.6-2.9 7.7-4.8c-1.1-1.9-4.2-4.8-7.7-4.8Zm0 1.8a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/></svg>
           <span id="compteur-valeur"></span>
@@ -133,7 +128,7 @@
     <p class="contact-aide">Le bouton « Écrire un e-mail » ouvre votre messagerie. Si rien ne se passe, copiez l'adresse et collez-la dans votre messagerie habituelle (Gmail, Outlook…).</p>
   </dialog>
 
-  <script src="data/content.js?v=20261015142819"></script>
+  <script src="data/content.js?v=20261015181606"></script>
   <script src="commun.js?v=7"></script>
   <script src="suivi.js?v=7"></script>
   <script src="visionneuse.js?v=7"></script>

@@ -71,6 +71,8 @@
     $("important-titre").textContent = accueil.important_titre || "Information importante";
     $("important-liste").innerHTML = imp.map(function (a, n) { return A.afficheHtml(a, n === 0); }).join("");
     $("important").hidden = false;
+    $("nav-important").hidden = false;
+    $("nav-important").firstChild.textContent = accueil.important_titre || "Information importante";
   }
 
   /* ---------- À la une : affiches entières, les unes sous les autres ---------- */
@@ -78,6 +80,8 @@
   $("affiches").innerHTML = affiches.length
     ? affiches.map(function (a, n) { return A.afficheHtml(a, n === 0 && !imp.length); }).join("")
     : '<p class="vide">Aucune affiche pour le moment. Revenez bientôt&nbsp;!</p>';
+
+  A.activerPdf(document);
 
   /* ---------- La gazette (lecture en ligne avec le visualiseur) ---------- */
   var gActives = actifs(D.gazettes).sort(A.parDate);
@@ -125,11 +129,6 @@
     zoneGaz.innerHTML = html;
   }
 
-  /* ---------- Archives : simple lien vers la page dédiée ---------- */
-  var nbArch = (D.affiches || []).concat(D.gazettes || [], D.importantes || []).filter(function (x) { return x.archive; }).length;
-  var note = $("archives-note");
-  if (note) note.textContent = nbArch ? nbArch + (nbArch > 1 ? " documents archivés" : " document archivé") : "Les anciennes affiches et gazettes";
-
   Suivi.init("accueil");
 
   /* ---------- Menu actif au défilement ---------- */
@@ -143,6 +142,6 @@
         });
       });
     }, { rootMargin: "-40% 0px -55% 0px" });
-    ["a-la-une", "la-gazette"].forEach(function (id) { obs.observe($(id)); });
+    (imp.length ? ["important"] : []).concat(["a-la-une", "la-gazette"]).forEach(function (id) { obs.observe($(id)); });
   }
 })();

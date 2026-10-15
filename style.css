@@ -421,3 +421,9 @@ html.viewer-ouvert { overflow: hidden; }
 @media (max-width: 640px) {
   .important .liste-affiches { padding: 10px; border-radius: 20px; }
 }
+
+.affiche-canvas { display: block; width: 100%; height: auto; }
+.affiche-chargement { padding: 40px 20px; text-align: center; color: var(--muted); font-weight: 700; }
+.nav-links a.is-current { background: var(--sky); color: var(--blue); }
+.nav-links a.nav-important { background: var(--sun); color: var(--navy-deep); }
+.nav-links a.nav-important:hover { background: #ffe34d; }

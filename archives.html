@@ -22,10 +22,17 @@
     </div>
   </header>
 
-  <nav class="nav" aria-label="Navigation">
+  <nav class="nav" aria-label="Navigation principale">
     <div class="wrap nav-inner">
-      <a class="nav-retour" href="index.html">&larr; Retour à l'accueil</a>
-      <a class="btn btn-contact" id="contact-nav" href="mailto:amicalelapaume@gmail.com"><span class="lbl">Nous contacter</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#a-la-une">À la une</a></li>
+        <li><a href="index.html#la-gazette">La gazette</a></li>
+        <li><a href="archives.html" class="is-current" aria-current="page">Archives</a></li>
+      </ul>
+      <a class="btn btn-contact" id="contact-nav" href="mailto:amicalelapaume@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.2-.5 6.8 5.3L18.8 6H5.2ZM19 7.9l-6.4 5a1 1 0 0 1-1.2 0L5 7.9v9.6c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V7.9Z"/></svg>
+        <span class="lbl">Nous contacter</span>
+      </a>
     </div>
   </nav>
 
@@ -73,7 +80,7 @@
     <div class="viewer-vignettes" id="viewer-vignettes" aria-label="Pages du document" hidden></div>
   </dialog>
 
-  <script src="data/content.js?v=20261015142819"></script>
+  <script src="data/content.js?v=20261015181606"></script>
   <script src="commun.js?v=7"></script>
   <script src="suivi.js?v=7"></script>
   <script src="visionneuse.js?v=7"></script>
