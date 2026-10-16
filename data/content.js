@@ -97,7 +97,7 @@ window.SITE_DATA = {
   "mentions": {
     "association": "Amicale des locataires – le Clos La Paume",
     "adresse": "8, rue du Clos la Paume – 92220 Bagneux",
-    "directeur": "Président de l'amicale : M. Moussa SIDIBE. Responsable de la publication du site : M. Sébastien FOURNIER.",
+    "directeur": "Responsable de la publication du site internet, M. Sébastien FOURNIER, président de l'amicale des locataires le clos la Paume, M. Moussa SIDIBE",
     "rna": "",
     "siret": "",
     "declaration": "",
