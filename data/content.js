@@ -100,7 +100,7 @@ window.SITE_DATA = {
     "directeur": "Responsable de la publication du site internet, M. Sébastien FOURNIER, président de l'amicale des locataires le clos la Paume, M. Moussa SIDIBE",
     "rna": "",
     "siret": "",
-    "declaration": "",
+    "declaration": "23 juin 1989",
     "complement": "",
     "maj": "2026-10-16"
   },
