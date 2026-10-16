@@ -15,7 +15,7 @@
 <body>
   <a class="skip" href="#a-la-une">Aller au contenu</a>
 
-  <header class="site-header site-header-compact">
+  <header id="haut" class="site-header site-header-compact">
     <div class="header-sky" aria-hidden="true"><span class="sun"></span></div>
     <div class="wrap">
       <h1 class="logo-card">
@@ -27,14 +27,11 @@
   <nav class="nav" aria-label="Navigation principale">
     <div class="wrap nav-inner">
       <ul class="nav-links">
+        <li><a href="#haut">Accueil</a></li>
         <li id="nav-important" hidden><a class="nav-important" href="#important">Information importante</a></li>
         <li><a href="#a-la-une">À la une</a></li>
         <li><a href="archives.html">Archives</a></li>
       </ul>
-      <a class="btn btn-contact" id="contact-nav" href="mailto:amicalelapaume@gmail.com">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.2-.5 6.8 5.3L18.8 6H5.2ZM19 7.9l-6.4 5a1 1 0 0 1-1.2 0L5 7.9v9.6c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V7.9Z"/></svg>
-        <span class="lbl">Nous contacter</span>
-      </a>
     </div>
   </nav>
 
@@ -42,7 +39,7 @@
 
   <main>
 
-    <section class="intro wrap" aria-labelledby="intro-titre">
+    <section id="accueil" class="intro wrap" aria-labelledby="intro-titre">
       <div class="intro-grid">
         <div class="intro-card">
           <h2 id="intro-titre">Bienvenue</h2>
@@ -126,10 +123,11 @@
     <p class="contact-aide">Le bouton « Écrire un e-mail » ouvre votre messagerie. Si rien ne se passe, copiez l'adresse et collez-la dans votre messagerie habituelle (Gmail, Outlook…).</p>
   </dialog>
 
-  <script src="data/content.js?v=20261015184724"></script>
+  <script src="data/content.js?v=20261016142316"></script>
   <script src="commun.js?v=8"></script>
   <script src="suivi.js?v=8"></script>
   <script src="visionneuse.js?v=8"></script>
-  <script src="app.js?v=8"></script>
+  <script src="contact.js?v=9"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>

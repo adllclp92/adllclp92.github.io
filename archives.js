@@ -3,17 +3,12 @@
   "use strict";
   var A = window.Amicale, D = A.donnees, $ = A.$, esc = A.esc, url = A.url;
 
-  var lien = $("contact-nav");
-  lien.href = A.mailto;
-  lien.title = A.email;
-  lien.addEventListener("click", function () { Suivi.evenement("contact"); });
-
   var imp = (D.importantes || []).filter(function (x) { return !x.archive; });
   if (imp.length) {
     var li = document.createElement("li");
     li.innerHTML = '<a class="nav-important" href="index.html#important">' + esc((D.accueil || {}).important_titre || "Information importante") + "</a>";
     var ul = document.querySelector(".nav-links");
-    ul.insertBefore(li, ul.firstChild);
+    ul.insertBefore(li, ul.children[1] || null);
   }
 
   function marque(type) {

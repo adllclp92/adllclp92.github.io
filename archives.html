@@ -25,17 +25,16 @@
   <nav class="nav" aria-label="Navigation principale">
     <div class="wrap nav-inner">
       <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="index.html#a-la-une">À la une</a></li>
         <li><a href="archives.html" class="is-current" aria-current="page">Archives</a></li>
       </ul>
-      <a class="btn btn-contact" id="contact-nav" href="mailto:amicalelapaume@gmail.com">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.2-.5 6.8 5.3L18.8 6H5.2ZM19 7.9l-6.4 5a1 1 0 0 1-1.2 0L5 7.9v9.6c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V7.9Z"/></svg>
-        <span class="lbl">Nous contacter</span>
-      </a>
     </div>
   </nav>
 
   <main class="page-archives wrap">
+    <div class="archives-haut">
+      <div class="archives-titre">
     <div class="section-head">
       <h1 class="pill pill-navy">Archives</h1>
       <p class="section-note">Les anciennes affiches et gazettes</p>
@@ -45,6 +44,16 @@
       <button class="filtre" data-filtre="affiche" role="tab" aria-selected="false">Affiches</button>
       <button class="filtre" data-filtre="gazette" role="tab" aria-selected="false">Gazettes</button>
     </div>
+      </div>
+      <aside class="archives-aside" aria-label="Nous contacter">
+        <div class="aside-card aside-contact">
+        <h3>Nous contacter</h3>
+        <p class="aside-mail email-texte"></p>
+        <a class="btn btn-contact" id="contact-aside" href="mailto:amicalelapaume@gmail.com">Écrire ou copier l'adresse</a>
+      </div>
+      </aside>
+    </div>
+
     <div id="liste-archives"></div>
   </main>
 
@@ -54,7 +63,7 @@
         <p class="footer-name">Amicale des locataires — le Clos La Paume</p>
         <p>8, rue du Clos la Paume — 92220 Bagneux</p>
         <p class="footer-small">Association régie par la loi de 1901</p>
-        <p class="footer-liens"><a href="index.html">Accueil</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+        <p class="footer-liens"><a href="mentions-legales.html">Mentions légales</a></p>
         <p class="compteur" id="compteur" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7Zm0 2.2c-3.5 0-6.6 2.9-7.7 4.8 1.1 1.9 4.2 4.8 7.7 4.8s6.6-2.9 7.7-4.8c-1.1-1.9-4.2-4.8-7.7-4.8Zm0 1.8a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/></svg><span id="compteur-valeur"></span></p>
       </div>
     </div>
@@ -79,10 +88,25 @@
     <div class="viewer-vignettes" id="viewer-vignettes" aria-label="Pages du document" hidden></div>
   </dialog>
 
-  <script src="data/content.js?v=20261015184724"></script>
+
+  <dialog id="contact-fenetre" class="contact-fenetre" aria-labelledby="contact-titre">
+    <button class="fermer" type="button" aria-label="Fermer">×</button>
+    <h2 id="contact-titre">Nous contacter</h2>
+    <p>Écrivez à l'amicale à cette adresse&nbsp;:</p>
+    <div class="email-boite">
+      <input id="contact-email" class="email-champ" type="text" readonly value="amicalelapaume@gmail.com" aria-label="Adresse e-mail de l'amicale">
+      <button id="contact-copier" class="btn btn-primary" type="button">Copier</button>
+    </div>
+    <p id="contact-copie-ok" class="copie-ok" role="status" aria-live="polite"></p>
+    <a id="contact-ecrire" class="btn btn-contact" href="mailto:amicalelapaume@gmail.com">Écrire un e-mail</a>
+    <p class="contact-aide">Le bouton « Écrire un e-mail » ouvre votre messagerie. Si rien ne se passe, copiez l'adresse et collez-la dans votre messagerie habituelle (Gmail, Outlook…).</p>
+  </dialog>
+
+  <script src="data/content.js?v=20261016142316"></script>
   <script src="commun.js?v=8"></script>
   <script src="suivi.js?v=8"></script>
   <script src="visionneuse.js?v=8"></script>
-  <script src="archives.js?v=8"></script>
+  <script src="contact.js?v=9"></script>
+  <script src="archives.js?v=9"></script>
 </body>
 </html>

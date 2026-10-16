@@ -117,11 +117,9 @@
         return '<a class="affiche-page" href="' + A.esc(A.url(src)) + '" target="_blank" rel="noopener" title="Ouvrir l\'affiche en grand">' +
           '<img src="' + A.esc(A.url(src)) + '" alt="' + A.esc(alt) + '"' + (prioritaire && i === 0 ? "" : ' loading="lazy"') + "></a>";
       }).join("");
-      actions += '<a class="btn btn-outline" href="' + A.esc(A.url(pages[0])) + '" target="_blank" rel="noopener">Ouvrir en grand</a>';
     } else {
       visuel = '<div class="affiche-pdfjs" data-pdf="' + A.esc(A.url(a.fichier)) + '">' +
         '<p class="affiche-chargement">Chargement de l\'affiche…</p></div>';
-      actions += '<a class="btn btn-outline" href="' + A.esc(A.url(a.fichier)) + '" target="_blank" rel="noopener">Ouvrir en grand</a>';
     }
     if (A.estPdf(a.fichier)) {
       actions += '<a class="btn btn-outline" href="' + A.esc(A.url(a.fichier)) + '" download>Télécharger (PDF)</a>';
