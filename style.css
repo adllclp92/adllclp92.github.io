@@ -513,3 +513,6 @@ html.viewer-ouvert { overflow: hidden; }
 .archives-haut .section-head { margin-bottom: 20px; }
 .archives-haut .filtres { margin-bottom: 0; }
 @media (max-width: 820px) { .archives-haut { grid-template-columns: 1fr; } }
+
+/* Texte de secours quand le logo est supprime */
+.logo-card .logo-texte { display: block; padding: 6px 4px; font-family: Ubuntu, sans-serif; font-weight: 700; font-size: 1.5rem; color: #0b3a8a; line-height: 1.2; }

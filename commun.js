@@ -55,6 +55,22 @@
       obs.observe(el);
     });
   };
+  /* Logo supprimé ou introuvable : le nom de l'amicale s'affiche à la place */
+  function logoAbsent(img) {
+    if (img.getAttribute("data-secours")) return;
+    img.setAttribute("data-secours", "1");
+    var t = document.createElement("span");
+    t.className = "logo-texte";
+    t.textContent = "Amicale des locataires – le Clos La Paume";
+    img.replaceWith(t);
+  }
+  document.addEventListener("error", function (e) {
+    if (e.target && e.target.tagName === "IMG" && e.target.closest(".logo-card")) logoAbsent(e.target);
+  }, true);
+  Array.prototype.forEach.call(document.querySelectorAll(".logo-card img"), function (img) {
+    if (img.complete && img.naturalWidth === 0) logoAbsent(img);
+  });
+
   A.email = D.contact || "amicalelapaume@gmail.com";
   A.mailto = "mailto:" + A.email + "?subject=" + encodeURIComponent("Contact depuis le site de l'amicale");
 

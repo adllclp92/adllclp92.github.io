@@ -19,7 +19,7 @@ window.SITE_DATA = {
       "titre": "Assemblée générale du 5 novembre 2026",
       "date": "2026-10-12",
       "description": "",
-      "id": "dc37b2004f",
+      "id": "04ca454348",
       "fichier": "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026-v2.png",
       "archive": false,
       "ordre": 0
@@ -31,10 +31,10 @@ window.SITE_DATA = {
       "date": "2026-03-01",
       "description": "",
       "numero": "1",
-      "id": "e6f04c1f7c",
+      "id": "80ed1e8732",
       "fichier": "gazettes/20260301-gazette-n1.pdf",
       "archive": true,
-      "date_archivage": "2026-10-12",
+      "date_archivage": "2026-10-17",
       "pages": [
         "gazettes/20260301-gazette-n1-page1.jpg",
         "gazettes/20260301-gazette-n1-page2.jpg",
@@ -66,7 +66,7 @@ window.SITE_DATA = {
       "date": "2026-05-24",
       "description": "",
       "numero": "2",
-      "id": "e0f222d036",
+      "id": "4bb4230505",
       "fichier": "gazettes/20260524-gazette-n2.pdf",
       "archive": false,
       "pages": [
@@ -107,6 +107,8 @@ window.SITE_DATA = {
   "registre_gazettes": {
     "e6f04c1f7c": "Gazette n°1",
     "e0f222d036": "Gazette n°2",
-    "97f374468f": "20260301-Gazette n°1"
+    "97f374468f": "20260301-Gazette n°1",
+    "80ed1e8732": "Gazette n°1",
+    "4bb4230505": "Gazette n°2"
   }
 };
