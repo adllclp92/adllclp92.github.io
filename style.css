@@ -520,3 +520,169 @@ html.viewer-ouvert { overflow: hidden; }
 
 /* Texte de secours quand le logo est supprime */
 .logo-card .logo-texte { display: block; padding: 6px 4px; font-family: Ubuntu, sans-serif; font-weight: 700; font-size: 1.5rem; color: #0b3a8a; line-height: 1.2; }
+
+
+/* =====================================================================
+   Design v3 – version modernisée (surcharge : tout se règle ici)
+   ===================================================================== */
+:root {
+  --radius: 26px;
+  --bg: #f4f8fd;
+  --shadow: 0 1px 2px rgba(11, 58, 138, .04), 0 10px 30px rgba(11, 58, 138, .07);
+  --shadow-hover: 0 2px 6px rgba(11, 58, 138, .06), 0 22px 50px rgba(11, 58, 138, .16);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+body { font-size: 1.08rem; background: var(--bg); }
+h1, h2, h3 { letter-spacing: -.02em; }
+.wrap { width: min(1180px, 100% - 40px); }
+
+/* ---------- En-tête : grand aplat marine, soleil et colline du logo ---------- */
+.site-header, .site-header-compact {
+  background: var(--navy); padding: clamp(36px, 6vw, 72px) 0 clamp(64px, 9vw, 120px);
+}
+.site-header::before {            /* colline verte */
+  content: ""; position: absolute; left: -6vw; bottom: -25vw; width: 34vw; height: 34vw; border-radius: 50%;
+  background: var(--green); pointer-events: none;
+}
+.site-header::after {             /* vague claire qui rejoint la page */
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: clamp(28px, 5vw, 56px);
+  background: var(--bg); border-radius: 50% 50% 0 0 / 100% 100% 0 0; pointer-events: none;
+}
+.sun {
+  right: 6%; top: -90px; width: clamp(180px, 26vw, 340px); height: clamp(180px, 26vw, 340px);
+  background: var(--sun); opacity: 1;
+}
+.site-header .logo-card, .site-header-compact .logo-card {
+  max-width: 640px; margin: 0; padding: clamp(14px, 2.2vw, 24px); border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(4, 20, 60, .35);
+}
+.site-header-compact .logo-card { max-width: 520px; }
+.logo-lien { transition: transform .3s var(--ease); }
+.logo-lien:hover { transform: translateY(-3px); }
+
+/* ---------- Navigation flottante ---------- */
+.nav {
+  top: 10px; z-index: 30; background: transparent; border: 0; backdrop-filter: none; -webkit-backdrop-filter: none;
+  margin-top: -34px; pointer-events: none;
+}
+.nav-inner {
+  pointer-events: auto; min-height: 60px; padding: 6px 8px 6px 10px; border-radius: 999px;
+  background: rgba(255, 255, 255, .92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 34px rgba(11, 58, 138, .16);
+}
+.nav-links a { padding: 10px 18px; transition: background .25s, color .25s; }
+.nav-links a:hover { background: var(--sky-pale); color: var(--blue); }
+.nav-links a.is-current { background: var(--navy); color: #fff; }
+.nav-links a.nav-important { background: var(--sun); color: var(--navy-deep); }
+.btn { padding: 13px 24px; transition: transform .25s var(--ease), box-shadow .25s, background .2s, color .2s; }
+.btn:active { transform: scale(.97); }
+.btn-contact { box-shadow: none; }
+.btn-contact:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(90, 163, 58, .35); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(11, 58, 138, .28); }
+.nav-contact { padding: 12px 24px; }
+
+.bandeau { font-size: 1.05rem; padding: 14px 16px; }
+
+/* ---------- Accueil : grand titre, texte à l'air libre ---------- */
+.intro { margin-top: clamp(40px, 7vw, 84px); }
+.intro-grid { grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.intro-card { background: none; box-shadow: none; padding: 0; border-left: 0; }
+.intro-card h2 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.02; letter-spacing: -.035em; color: var(--navy); }
+.intro-sub { margin-top: 14px; font-size: clamp(1.2rem, 2.4vw, 1.6rem); color: var(--green-deep); font-weight: 800; }
+.intro-texte { margin-top: 22px; font-size: clamp(1.1rem, 1.6vw, 1.25rem); line-height: 1.7; max-width: 62ch; }
+
+.aside-card { border: 0; border-radius: var(--radius); }
+.aside-gazette {
+  background: var(--navy); color: #fff; padding: 28px; gap: 22px; box-shadow: 0 24px 50px rgba(11, 58, 138, .28);
+  position: relative; overflow: hidden;
+}
+.aside-gazette::before {
+  content: ""; position: absolute; right: -50px; top: -50px; width: 150px; height: 150px; border-radius: 50%; background: var(--sun);
+}
+.aside-gazette > * { position: relative; }
+.aside-gazette h3 { color: #fff; font-size: 1.35rem; }
+.aside-gazette p { color: #c9dcf7; }
+.aside-gazette .gazette-badge { background: var(--sun); }
+.aside-gazette .btn-primary { background: var(--green); }
+.aside-gazette .btn-primary:hover { background: var(--green-deep); }
+.aside-gazette .btn-outline { color: #fff; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .35); }
+.aside-gazette .btn-outline:hover { box-shadow: inset 0 0 0 2px var(--sun); color: var(--sun); }
+.aside-couv { width: 108px; border-top: 0; border-radius: 10px; transform: rotate(-3deg); transition: transform .3s var(--ease); box-shadow: 0 16px 30px rgba(0, 0, 0, .35); }
+.aside-couv:hover { transform: rotate(0) translateY(-4px) scale(1.03); }
+
+/* ---------- Titres de section ---------- */
+.section { padding: clamp(48px, 8vw, 96px) 0; }
+.section-head { margin-bottom: clamp(26px, 4vw, 44px); }
+.pill { font-size: clamp(2.1rem, 5.5vw, 3.6rem); line-height: 1.05; letter-spacing: -.03em; }
+.pill::after { width: 84px; height: 8px; border-radius: 4px; margin-top: 14px; }
+.section-note { font-size: 1.1rem; }
+
+/* ---------- Affiches ---------- */
+.liste-affiches { gap: clamp(36px, 6vw, 64px); }
+.affiche {
+  max-width: 820px; border: 0; border-radius: 32px; box-shadow: var(--shadow);
+  transition: box-shadow .35s var(--ease), transform .35s var(--ease);
+}
+.affiche:hover { box-shadow: var(--shadow-hover); }
+.affiche-tete { border-top: 0; padding: 28px 32px 20px; }
+.affiche-tete h3 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); line-height: 1.12; }
+.date {
+  display: inline-block; background: #e4f3dc; color: var(--green-deep); border-radius: 999px;
+  padding: 4px 12px; letter-spacing: .02em; text-transform: none; font-size: .9rem;
+}
+.affiche-actions { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; border-top: 0; padding: 16px 32px 24px; }
+.btn-outline { box-shadow: inset 0 0 0 2px #cfdcec; }
+
+/* Information importante : aplat jaune, sans bordure ni dégradé */
+.important .liste-affiches { background: #fff4b8; border: 0; border-radius: 40px; padding: clamp(14px, 3vw, 36px); box-shadow: none; }
+.important .affiche-tete { border-top: 0; }
+
+/* ---------- Gazettes et archives ---------- */
+.gazette, .archive { border-radius: 22px; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.archive:hover { transform: translateY(-3px); }
+.filtre { padding: 10px 20px; border: 0; background: #fff; box-shadow: inset 0 0 0 2px #d6e2f1; transition: all .2s; }
+.filtre:hover { box-shadow: inset 0 0 0 2px var(--blue); }
+.filtre.is-active { box-shadow: none; }
+.annee { font-size: clamp(1.5rem, 3vw, 2rem); margin: 44px 0 18px; }
+.annee::after { height: 4px; border-radius: 2px; background: #d6e2f1; }
+.archive-vignette { border-radius: 12px; width: 56px; height: 70px; }
+.archives-carte { border-radius: 32px; padding: 32px 36px; }
+
+/* ---------- Mentions légales ---------- */
+.legal-bloc { border-left: 0; border-radius: 26px; padding: 28px 32px; }
+.legal-bloc h2 { font-size: 1.4rem; }
+
+/* ---------- Pied de page ---------- */
+.footer { background: var(--navy-deep); padding: clamp(48px, 7vw, 88px) 0 48px; margin-top: clamp(40px, 6vw, 80px); }
+.footer::before { height: 10px; background: linear-gradient(90deg, var(--blue) 0 34%, var(--green) 34% 67%, var(--sun) 67% 100%); }
+.footer-name { font-size: clamp(1.6rem, 4vw, 2.6rem); line-height: 1.1; letter-spacing: -.02em; margin-bottom: 10px; }
+.footer p { font-size: 1.05rem; }
+.footer-mail .email-texte { color: var(--sun); }
+
+/* ---------- Fenêtres ---------- */
+.contact-fenetre { border-radius: 30px; border-top: 0; padding: 36px 32px 30px; }
+.contact-fenetre h2 { font-size: 1.9rem; }
+
+/* ---------- Apparition ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .intro-card h2, .intro-sub { animation: monte .9s var(--ease) both; }
+  .intro-sub { animation-delay: .1s; }
+  .site-header .sun { animation: flotte 9s ease-in-out infinite alternate; }
+  @keyframes monte { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  @keyframes flotte { from { transform: translateY(0); } to { transform: translateY(18px); } }
+}
+
+@media (max-width: 820px) {
+  .intro-grid { grid-template-columns: 1fr; }
+  .site-header::before { width: 90vw; height: 90vw; left: -30vw; bottom: -76vw; }
+}
+@media (max-width: 640px) {
+  .nav { margin-top: -28px; top: 6px; }
+  .nav-inner { min-height: 54px; }
+  .nav-links a { padding: 8px 12px; }
+  .affiche-tete { padding: 20px 20px 14px; }
+  .affiche-actions { padding: 12px 20px 20px; }
+  .affiche { border-radius: 24px; }
+  .aside-gazette { padding: 22px; }
+}
