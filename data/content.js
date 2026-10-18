@@ -101,7 +101,7 @@ window.SITE_DATA = {
     "siret": "",
     "declaration": "23 juin 1989",
     "complement": "",
-    "maj": "2026-10-17"
+    "maj": "2026-10-18"
   },
   "importantes": [],
   "registre_gazettes": {

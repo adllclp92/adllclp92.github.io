@@ -12,10 +12,10 @@
   champ.size = Math.max(email.length, 10);
   $("contact-ecrire").href = A.mailto;
   Array.prototype.forEach.call(document.querySelectorAll(".email-texte"), function (el) { el.textContent = email; });
-  ["contact-aside", "contact-footer"].forEach(function (id) {
+  ["contact-nav", "contact-footer"].forEach(function (id) {
     var lien = $(id);
     if (!lien) return;
-    lien.href = A.mailto;
+    if (lien.tagName === "A") lien.href = A.mailto;
     lien.title = email;
     lien.addEventListener("click", function (e) {
       Suivi.evenement("contact");
