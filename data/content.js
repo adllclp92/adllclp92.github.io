@@ -20,9 +20,12 @@ window.SITE_DATA = {
       "date": "2026-10-12",
       "description": "",
       "id": "04ca454348",
-      "fichier": "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026-v2.png",
+      "fichier": "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026-v2.pdf",
       "archive": false,
-      "ordre": 0
+      "ordre": 0,
+      "pages": [
+        "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026-v2-page1.jpg"
+      ]
     }
   ],
   "gazettes": [
