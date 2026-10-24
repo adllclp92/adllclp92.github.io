@@ -88,6 +88,10 @@
     vImg.removeAttribute("src");
     if (vOrigine && document.contains(vOrigine) && vOrigine.focus) vOrigine.focus();
   });
+  /* Les liens de navigation ferment le lecteur, puis la page se déplace */
+  Array.prototype.forEach.call(vis.querySelectorAll(".viewer-nav a"), function (a) {
+    a.addEventListener("click", function () { vis.close(); });
+  });
   vPrec.addEventListener("click", function () { aller(vIdx - 1); });
   vSuiv.addEventListener("click", function () { aller(vIdx + 1); });
   vZoom.addEventListener("click", function () { zoomer(!vis.classList.contains("zoom")); });

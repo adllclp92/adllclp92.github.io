@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
   <a class="skip" href="#a-la-une">Aller au contenu</a>
@@ -88,6 +88,11 @@
 
   <dialog id="viewer" class="viewer" aria-label="Lecteur de document">
     <div class="viewer-barre">
+      <nav class="viewer-nav" aria-label="Navigation du site">
+        <a class="viewer-btn" href="#haut">Accueil</a>
+        <a class="viewer-btn" href="#a-la-une">À la une</a>
+        <a class="viewer-btn" href="#intro-gazette">Gazette</a>
+      </nav>
       <p class="viewer-titre" id="viewer-titre"></p>
       <span class="viewer-compteur" id="viewer-compteur" aria-live="polite"></span>
       <button class="viewer-btn" id="viewer-zoom" type="button" aria-pressed="false">
@@ -131,7 +136,7 @@
   <script src="data/content.js?v=20261024172334"></script>
   <script src="commun.js?v=9"></script>
   <script src="suivi.js?v=9"></script>
-  <script src="visionneuse.js?v=9"></script>
+  <script src="visionneuse.js?v=10"></script>
   <script src="contact.js?v=10"></script>
   <script src="app.js?v=9"></script>
 </body>

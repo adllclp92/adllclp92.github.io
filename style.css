@@ -186,6 +186,7 @@ html.viewer-ouvert { overflow: hidden; }
   font: 800 .88rem/1 "Nunito", sans-serif; color: #fff; background: rgba(255, 255, 255, .14);
   border: 0; border-radius: 999px; padding: 10px 14px; transition: background .2s;
 }
+.viewer-nav { flex: none; display: flex; gap: 6px; }
 .viewer-btn:hover { background: rgba(255, 255, 255, .26); }
 .viewer-btn[aria-pressed="true"] { background: var(--sun); color: var(--navy-deep); }
 .viewer-btn[hidden] { display: none; }
@@ -373,7 +374,9 @@ html.viewer-ouvert { overflow: hidden; }
   .car-fleche { width: 42px; height: 42px; font-size: 1.7rem; }
   .car-prec { left: 6px; }
   .car-suiv { right: 6px; }
-  .viewer-barre { gap: 8px; padding: 8px 10px; }
+  .viewer-barre { gap: 8px; padding: 8px 10px; flex-wrap: wrap; }
+  .viewer-nav { width: 100%; gap: 5px; }
+  .viewer-nav .viewer-btn { padding: 8px 10px; font-size: .82rem; }
   .viewer-titre { font-size: .95rem; }
   .viewer-btn { padding: 9px 11px; }
   .viewer-long { display: none; }
