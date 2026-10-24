@@ -56,6 +56,11 @@
         : '<a class="btn btn-primary" href="' + esc(url(g0.fichier)) + '" target="_blank" rel="noopener">Lire la gazette</a>') +
       (A.estPdf(g0.fichier) ? ' <a class="btn btn-outline" href="' + esc(url(g0.fichier)) + '" download>Télécharger (PDF)</a>' : "") + "</div>";
     ig.hidden = false;
+    /* Lien « Dernière gazette » de la barre : ouvre directement le visualiseur */
+    var lien = $("nav-derniere").firstChild;
+    if (pages0.length) { lien.setAttribute("data-doc", cle0); lien.setAttribute("data-page", "0"); lien.setAttribute("href", "#intro-gazette"); }
+    else { lien.setAttribute("href", url(g0.fichier)); lien.setAttribute("target", "_blank"); lien.setAttribute("rel", "noopener"); }
+    $("nav-derniere").hidden = false;
   }
 
   A.reveler(".section, .affiche, .aside-card, .intro-card");
