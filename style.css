@@ -690,3 +690,13 @@ h1, h2, h3 { letter-spacing: -.02em; }
   .affiche { border-radius: 24px; }
   .aside-gazette { padding: 22px; }
 }
+
+/* ---------- Mobile : bandeau d en-tete plus compact ---------- */
+@media (max-width: 640px) {
+  .site-header, .site-header-compact { padding: 12px 0 34px; }
+  .site-header .logo-card, .site-header-compact .logo-card { max-width: 250px; padding: 8px 10px; border-radius: 16px; box-shadow: 0 12px 24px rgba(4, 20, 60, .3); }
+  .site-header::after { height: 22px; }
+  .sun { width: 120px; height: 120px; top: -50px; }
+  .nav { margin-top: -18px; }
+  .intro { margin-top: 28px; }
+}

@@ -10,6 +10,12 @@
     var ul = document.querySelector(".nav-links");
     ul.insertBefore(li, ul.children[1] || null);
   }
+  if ((D.gazettes || []).some(function (x) { return !x.archive; })) {
+    var lg = document.createElement("li");
+    lg.innerHTML = '<a href="index.html#intro-gazette">La gazette</a>';
+    var ul2 = document.querySelector(".nav-links");
+    ul2.insertBefore(lg, ul2.lastElementChild);
+  }
 
   function marque(type) {
     return function (x) { return Object.assign({ type: type }, x); };
