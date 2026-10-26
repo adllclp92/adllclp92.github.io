@@ -700,3 +700,15 @@ h1, h2, h3 { letter-spacing: -.02em; }
   .nav { margin-top: -18px; }
   .intro { margin-top: 28px; }
 }
+
+/* Mobile : liens et bouton « Nous contacter » répartis sur 2 lignes au maximum */
+@media (max-width: 640px) {
+  .nav-inner { flex-wrap: wrap; justify-content: center; gap: 2px 2px; min-height: 0; padding: 4px 6px; border-radius: 22px; }
+  .nav-links { display: contents; }
+  .nav-links a { padding: 6px 9px; font-size: .84rem; white-space: nowrap; }
+  .nav-contact { margin-left: 0; padding: 6px 12px; font-size: .84rem; }
+}
+@media (max-width: 380px) {
+  .nav-links a { padding: 6px 6px; font-size: .78rem; }
+  .nav-contact { padding: 6px 9px; font-size: .78rem; }
+}
