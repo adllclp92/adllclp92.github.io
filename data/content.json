@@ -30,45 +30,11 @@
   ],
   "gazettes": [
     {
-      "titre": "Gazette n°1",
-      "date": "2026-03-01",
-      "description": "",
-      "numero": "1",
-      "id": "25c6db28f1",
-      "fichier": "gazettes/20260301-gazette-n1.pdf",
-      "archive": true,
-      "pages": [
-        "gazettes/20260301-gazette-n1-page1.jpg",
-        "gazettes/20260301-gazette-n1-page2.jpg",
-        "gazettes/20260301-gazette-n1-page3.jpg",
-        "gazettes/20260301-gazette-n1-page4.jpg",
-        "gazettes/20260301-gazette-n1-page5.jpg",
-        "gazettes/20260301-gazette-n1-page6.jpg",
-        "gazettes/20260301-gazette-n1-page7.jpg",
-        "gazettes/20260301-gazette-n1-page8.jpg",
-        "gazettes/20260301-gazette-n1-page9.jpg",
-        "gazettes/20260301-gazette-n1-page10.jpg",
-        "gazettes/20260301-gazette-n1-page11.jpg",
-        "gazettes/20260301-gazette-n1-page12.jpg",
-        "gazettes/20260301-gazette-n1-page13.jpg",
-        "gazettes/20260301-gazette-n1-page14.jpg",
-        "gazettes/20260301-gazette-n1-page15.jpg",
-        "gazettes/20260301-gazette-n1-page16.jpg",
-        "gazettes/20260301-gazette-n1-page17.jpg",
-        "gazettes/20260301-gazette-n1-page18.jpg",
-        "gazettes/20260301-gazette-n1-page19.jpg",
-        "gazettes/20260301-gazette-n1-page20.jpg",
-        "gazettes/20260301-gazette-n1-page21.jpg",
-        "gazettes/20260301-gazette-n1-page22.jpg"
-      ],
-      "date_archivage": "2026-10-24"
-    },
-    {
       "titre": "Gazette n°2",
       "date": "2026-05-24",
       "description": "",
       "numero": "2",
-      "id": "9bf084c075",
+      "id": "6ebea23baa",
       "fichier": "gazettes/20260524-gazette-n2.pdf",
       "archive": false,
       "pages": [
@@ -96,6 +62,40 @@
         "gazettes/20260524-gazette-n2-page22.jpg",
         "gazettes/20260524-gazette-n2-page23.jpg"
       ]
+    },
+    {
+      "titre": "Gazette n°1",
+      "date": "2026-03-01",
+      "description": "",
+      "numero": "1",
+      "id": "158e64acf9",
+      "fichier": "gazettes/20260301-gazette-n1.pdf",
+      "archive": true,
+      "pages": [
+        "gazettes/20260301-gazette-n1-page1.jpg",
+        "gazettes/20260301-gazette-n1-page2.jpg",
+        "gazettes/20260301-gazette-n1-page3.jpg",
+        "gazettes/20260301-gazette-n1-page4.jpg",
+        "gazettes/20260301-gazette-n1-page5.jpg",
+        "gazettes/20260301-gazette-n1-page6.jpg",
+        "gazettes/20260301-gazette-n1-page7.jpg",
+        "gazettes/20260301-gazette-n1-page8.jpg",
+        "gazettes/20260301-gazette-n1-page9.jpg",
+        "gazettes/20260301-gazette-n1-page10.jpg",
+        "gazettes/20260301-gazette-n1-page11.jpg",
+        "gazettes/20260301-gazette-n1-page12.jpg",
+        "gazettes/20260301-gazette-n1-page13.jpg",
+        "gazettes/20260301-gazette-n1-page14.jpg",
+        "gazettes/20260301-gazette-n1-page15.jpg",
+        "gazettes/20260301-gazette-n1-page16.jpg",
+        "gazettes/20260301-gazette-n1-page17.jpg",
+        "gazettes/20260301-gazette-n1-page18.jpg",
+        "gazettes/20260301-gazette-n1-page19.jpg",
+        "gazettes/20260301-gazette-n1-page20.jpg",
+        "gazettes/20260301-gazette-n1-page21.jpg",
+        "gazettes/20260301-gazette-n1-page22.jpg"
+      ],
+      "date_archivage": "2026-11-05"
     }
   ],
   "mentions": {
@@ -116,6 +116,8 @@
     "80ed1e8732": "Gazette n°1",
     "4bb4230505": "Gazette n°2",
     "25c6db28f1": "Gazette n°1",
-    "9bf084c075": "Gazette n°2"
+    "9bf084c075": "Gazette n°2",
+    "6ebea23baa": "Gazette n°2",
+    "158e64acf9": "Gazette n°1"
   }
 }
