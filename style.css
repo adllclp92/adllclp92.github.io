@@ -306,15 +306,6 @@ html.viewer-ouvert { overflow: hidden; }
 .footer-small { font-size: .9rem; opacity: .85; }
 .footer-small:empty { display: none; }
 
-/* ---------- Compteur de visites ---------- */
-.compteur {
-  display: inline-flex; align-items: center; gap: 8px; margin-top: 12px !important;
-  background: rgba(255, 255, 255, .1); border-radius: 999px; padding: 4px 12px 4px 10px;
-  font-size: .88rem; font-weight: 700; color: #fff;
-}
-.compteur[hidden] { display: none; }
-.compteur svg { width: 18px; height: 18px; fill: var(--sun); }
-
 /* ---------- Fenêtre « Nous contacter » ---------- */
 .footer-mail { margin-top: 8px !important; }
 .footer-mail .email-texte { font-weight: 800; color: #fff; user-select: all; -webkit-user-select: all; }
@@ -501,7 +492,6 @@ html.viewer-ouvert { overflow: hidden; }
   content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px;
   background: linear-gradient(90deg, var(--blue) 0 34%, var(--green) 34% 67%, var(--sun) 67% 100%);
 }
-.footer .compteur { opacity: .9; }
 
 @media (max-width: 820px) {
   .intro-grid { grid-template-columns: 1fr; }

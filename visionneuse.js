@@ -79,7 +79,6 @@
     document.documentElement.classList.add("viewer-ouvert");
     vis.showModal();
     $("viewer-fermer").focus();
-    if (window.Suivi && doc.id) window.Suivi.evenement("gaz-" + doc.id);
   }
 
   $("viewer-fermer").addEventListener("click", function () { vis.close(); });

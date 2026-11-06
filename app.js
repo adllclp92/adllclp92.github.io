@@ -64,7 +64,6 @@
   }
 
   A.reveler(".section, .affiche, .aside-card, .intro-card");
-  Suivi.init("accueil");
 
   /* ---------- Menu actif au défilement ---------- */
   var liens = document.querySelectorAll(".nav-links a");

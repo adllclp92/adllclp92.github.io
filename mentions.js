@@ -5,7 +5,6 @@
   var D = window.SITE_DATA || {};
   var M = D.mentions || {};
   var email = D.contact || "amicalelapaume@gmail.com";
-  var compteurActif = !(D.compteur && D.compteur.actif === false);
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -44,20 +43,6 @@
       "(contact : " + mail + ").</p>"],
     ["Données personnelles et cookies",
       "<p>Ce site ne comporte aucun formulaire, aucun compte utilisateur, aucun cookie et aucun outil publicitaire.</p>" +
-      (compteurActif
-        ? "<p><strong>Mesure de fréquentation anonyme.</strong> Pour connaître l'audience du site, nous utilisons le service " +
-          '<a href="https://www.goatcounter.com" target="_blank" rel="noopener"><em>GoatCounter</em></a>, un outil de statistiques ' +
-          "respectueux de la vie privée, sans cookie et sans publicité, qui ne suit pas les visiteurs d'un site à l'autre. Il " +
-          "enregistre uniquement des données agrégées : nombre de visites par jour, type d'appareil utilisé (déduit de la taille " +
-          "de l'écran), clics sur « Nous contacter », téléchargements de PDF et consultations des pages et des gazettes. " +
-          "Aucune donnée permettant d'identifier un visiteur n'est conservée ; l'amicale n'a accès qu'à des totaux. " +
-          "Pour ne compter qu'une fois un même navigateur par jour, la date de la dernière visite est mémorisée dans le stockage " +
-          "local de votre navigateur (aucune donnée personnelle) ; vous pouvez l'effacer à tout moment dans les réglages de votre " +
-          "navigateur. Comme pour toute connexion à un service en ligne, l'adresse IP est transmise techniquement au service " +
-          "pour répondre à la requête, mais elle n'est pas enregistrée en clair : GoatCounter ne conserve qu'une empreinte " +
-          "temporaire non réversible, servant à distinguer les visites. Plus d'informations dans la " +
-          '<a href="https://www.goatcounter.com/privacy" target="_blank" rel="noopener">politique de confidentialité de GoatCounter</a>.</p>'
-        : "") +
       "<p>Comme tout hébergeur, GitHub peut enregistrer des journaux techniques de connexion (dont l'adresse IP) selon sa " +
       '<a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">politique de confidentialité</a>.</p>' +
       "<p><strong>Courriels.</strong> Si vous écrivez à l'amicale, votre adresse e-mail et le contenu de votre message sont " +
@@ -75,8 +60,6 @@
   document.getElementById("legal-contenu").innerHTML = sections.map(function (s) {
     return '<section class="legal-bloc"><h2>' + s[0] + "</h2>" + s[1] + "</section>";
   }).join("");
-
-  if (window.Suivi) window.Suivi.init("mentions");
 
   if (M.maj) {
     var d = new Date(M.maj + "T12:00:00");

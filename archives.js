@@ -67,5 +67,4 @@
     });
   });
   A.reveler(".archive");
-  Suivi.init("archives");
 })();

@@ -18,7 +18,6 @@
     if (lien.tagName === "A") lien.href = A.mailto;
     lien.title = email;
     lien.addEventListener("click", function (e) {
-      Suivi.evenement("contact");
       if (!fenetre.showModal) return; /* très vieux navigateur : ouvre la messagerie */
       e.preventDefault();
       okMsg.textContent = "";
@@ -30,7 +29,6 @@
   champ.addEventListener("focus", function () { champ.select(); });
   champ.addEventListener("click", function () { champ.select(); });
   $("contact-copier").addEventListener("click", function () {
-    Suivi.evenement("copie");
     function reussi() { okMsg.textContent = "Adresse copiée ! Collez-la dans votre messagerie."; }
     function secours() {
       champ.focus();
@@ -47,7 +45,6 @@
       secours();
     }
   });
-  $("contact-ecrire").addEventListener("click", function () { Suivi.evenement("contact"); });
   fenetre.querySelector(".fermer").addEventListener("click", function () { fenetre.close(); });
   fenetre.addEventListener("click", function (e) { if (e.target === fenetre) fenetre.close(); });
 })();
