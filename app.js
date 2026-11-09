@@ -24,8 +24,6 @@
     $("important-titre").textContent = accueil.important_titre || "Information importante";
     $("important-liste").innerHTML = imp.map(function (a, n) { return A.afficheHtml(a, n === 0); }).join("");
     $("important").hidden = false;
-    $("nav-important").hidden = false;
-    $("nav-important").firstChild.textContent = accueil.important_titre || "Information importante";
   }
 
   /* ---------- À la une : affiches entières, les unes sous les autres ---------- */
@@ -54,28 +52,15 @@
       (pages0.length
         ? '<button class="btn btn-primary" type="button" data-doc="' + esc(cle0) + '" data-page="0">Lire en ligne</button>'
         : '<a class="btn btn-primary" href="' + esc(url(g0.fichier)) + '" target="_blank" rel="noopener">Lire la gazette</a>') +
-      (A.estPdf(g0.fichier) ? ' <a class="btn btn-outline" href="' + esc(url(g0.fichier)) + '" download>Télécharger (PDF)</a>' : "") + "</div>";
+      (A.estPdf(g0.fichier) ? ' <a class="btn btn-outline" href="' + esc(url(g0.fichier)) + '" download>Télécharger (PDF)</a>' : "") +
+      ' <a class="btn btn-outline" href="archives.html">Accès aux archives</a></div>';
     ig.hidden = false;
-    /* Lien « Dernière gazette » de la barre : ouvre directement le visualiseur */
-    var lien = $("nav-derniere").firstChild;
-    if (pages0.length) { lien.setAttribute("data-doc", cle0); lien.setAttribute("data-page", "0"); lien.setAttribute("href", "#intro-gazette"); }
-    else { lien.setAttribute("href", url(g0.fichier)); lien.setAttribute("target", "_blank"); lien.setAttribute("rel", "noopener"); }
-    $("nav-derniere").hidden = false;
+  } else {
+    /* Pas de gazette en cours : l'accès aux archives reste proposé */
+    var ia = $("intro-gazette");
+    ia.innerHTML = '<div><h3>Archives</h3><p>Retrouvez les anciennes affiches et gazettes.</p><a class="btn btn-outline" href="archives.html">Accès aux archives</a></div>';
+    ia.hidden = false;
   }
 
   A.reveler(".section, .affiche, .aside-card, .intro-card");
-
-  /* ---------- Menu actif au défilement ---------- */
-  var liens = document.querySelectorAll(".nav-links a");
-  if ("IntersectionObserver" in window) {
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        Array.prototype.forEach.call(liens, function (l) {
-          l.classList.toggle("is-current", l.getAttribute("href") === "#" + (en.target.id === "accueil" ? "haut" : en.target.id));
-        });
-      });
-    }, { rootMargin: "-40% 0px -55% 0px" });
-    ["accueil"].concat(imp.length ? ["important"] : [], ["a-la-une"]).forEach(function (id) { obs.observe($(id)); });
-  }
 })();

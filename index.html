@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
   <a class="skip" href="#a-la-une">Aller au contenu</a>
@@ -21,31 +21,21 @@
       <h1 class="logo-card">
         <img src="assets/logo.png?v=20261105175135" alt="Amicale des locataires le Clos La Paume – 8, rue du Clos la Paume – 92220 Bagneux – Association régie par la loi de 1901" width="1600" height="534">
       </h1>
+      <button class="btn btn-contact header-contact" id="contact-nav" type="button">Nous contacter</button>
     </div>
   </header>
-
-  <nav class="nav" aria-label="Navigation principale">
-    <div class="wrap nav-inner">
-      <ul class="nav-links">
-        <li><a href="#haut">Accueil</a></li>
-        <li id="nav-important" hidden><a class="nav-important" href="#important">Information importante</a></li>
-        <li><a href="#a-la-une">À la une</a></li>
-        <li id="nav-derniere" hidden><a href="#intro-gazette">La gazette</a></li>
-        <li><a href="archives.html">Archives</a></li>
-      </ul>
-      <button class="btn btn-contact nav-contact" id="contact-nav" type="button">Nous contacter</button>
-    </div>
-  </nav>
 
   <div id="bandeau" class="bandeau" hidden></div>
 
   <main>
 
     <section id="accueil" class="intro wrap" aria-labelledby="intro-titre">
+      <div class="intro-tete">
+        <h2 id="intro-titre">Bienvenue sur le site de l'amicale</h2>
+        <p class="intro-sub" id="intro-sous-titre"></p>
+      </div>
       <div class="intro-grid">
         <div class="intro-card">
-          <h2 id="intro-titre">Bienvenue</h2>
-          <p class="intro-sub" id="intro-sous-titre"></p>
           <div id="intro-texte" class="intro-texte"></div>
         </div>
         <aside class="intro-aside" aria-label="Accès rapides">
@@ -74,12 +64,12 @@
     <div class="wrap footer-inner">
       <div>
         <p class="footer-name">Amicale des locataires — le Clos La Paume</p>
-        <p>8, rue du Clos la Paume — 92220 Bagneux</p>
-        <p class="footer-small">Association régie par la loi de 1901</p>
+        <p>8, rue du Clos la Paume — 92220 Bagneux · Association régie par la loi de 1901</p>
         <p class="footer-mail">E-mail : <span class="email-texte">amicalelapaume@gmail.com</span></p>
         <p class="footer-small" id="pied-texte"></p>
         <p class="footer-liens"><a href="mentions-legales.html">Mentions légales</a></p>
       </div>
+      <button class="btn btn-contact" id="contact-footer" type="button">Nous contacter</button>
     </div>
   </footer>
 
@@ -134,6 +124,6 @@
   <script src="commun.js?v=9"></script>
   <script src="visionneuse.js?v=11"></script>
   <script src="contact.js?v=11"></script>
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=12"></script>
 </body>
 </html>

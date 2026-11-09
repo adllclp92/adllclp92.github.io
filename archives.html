@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
   <header class="site-header site-header-compact">
@@ -19,19 +19,9 @@
       <a class="logo-card logo-lien" href="index.html" aria-label="Retour à l'accueil du site">
         <img src="assets/logo.png?v=20261105175135" alt="Amicale des locataires le Clos La Paume – Bagneux" width="1600" height="534">
       </a>
+      <button class="btn btn-contact header-contact" id="contact-nav" type="button">Nous contacter</button>
     </div>
   </header>
-
-  <nav class="nav" aria-label="Navigation principale">
-    <div class="wrap nav-inner">
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#a-la-une">À la une</a></li>
-        <li><a href="archives.html" class="is-current" aria-current="page">Archives</a></li>
-      </ul>
-      <button class="btn btn-contact nav-contact" id="contact-nav" type="button">Nous contacter</button>
-    </div>
-  </nav>
 
   <main class="page-archives wrap">
     <div class="archives-haut">
@@ -55,11 +45,11 @@
     <div class="wrap footer-inner">
       <div>
         <p class="footer-name">Amicale des locataires — le Clos La Paume</p>
-        <p>8, rue du Clos la Paume — 92220 Bagneux</p>
-        <p class="footer-small">Association régie par la loi de 1901</p>
+        <p>8, rue du Clos la Paume — 92220 Bagneux · Association régie par la loi de 1901</p>
         <p class="footer-mail">E-mail : <span class="email-texte">amicalelapaume@gmail.com</span></p>
-        <p class="footer-liens"><a href="mentions-legales.html">Mentions légales</a></p>
+        <p class="footer-liens"><a href="index.html">Accueil</a> · <a href="mentions-legales.html">Mentions légales</a></p>
       </div>
+      <button class="btn btn-contact" id="contact-footer" type="button">Nous contacter</button>
     </div>
   </footer>
 
@@ -115,6 +105,6 @@
   <script src="commun.js?v=9"></script>
   <script src="visionneuse.js?v=11"></script>
   <script src="contact.js?v=11"></script>
-  <script src="archives.js?v=10"></script>
+  <script src="archives.js?v=11"></script>
 </body>
 </html>
