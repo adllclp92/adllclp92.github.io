@@ -781,3 +781,15 @@ h1, h2, h3 { letter-spacing: -.02em; }
 .footer-mail .email-texte { color: var(--navy); }
 .footer-liens a { color: var(--blue); }
 .footer-liens a:hover { color: var(--navy); }
+
+.legal-tete { display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: 8px; }
+.legal-tete .pill { margin-bottom: 0; }
+
+
+/* Bouton « ← Accueil » : même style vert partout */
+.btn-petit { padding: 7px 14px; font-size: .85rem; }
+.btn-filtre { padding: 10px 20px; font-size: .95rem; }
+.footer-liens .btn-contact { color: #fff; text-decoration: none; margin-right: 8px; }
+.footer-liens .btn-contact:hover { color: #fff; }
+.viewer-accueil { background: var(--green); }
+.viewer-accueil:hover { background: var(--green-deep); }
