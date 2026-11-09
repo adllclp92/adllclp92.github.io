@@ -755,3 +755,29 @@ h1, h2, h3 { letter-spacing: -.02em; }
   .header-contact { padding: 8px 14px; font-size: .85rem; }
   .intro { margin-top: 4px; }
 }
+/* ===== v5 : largeur optimisée + bouton Accueil ===== */
+.wrap { width: min(1360px, 100% - 48px); }
+.liste-affiches .affiche, .affiche { max-width: 1000px; }
+.intro-grid { grid-template-columns: minmax(0, 1.4fr) minmax(340px, 1fr); }
+.intro-texte { max-width: none; }
+.liste-archives { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
+.header-actions { display: flex; align-items: center; gap: 10px; flex: none; }
+.btn-light { box-shadow: 0 6px 16px rgba(4, 20, 60, .25); }
+@media (max-width: 640px) { .header-actions .btn { padding: 8px 12px; font-size: .85rem; } .wrap { width: min(1360px, 100% - 28px); } }
+.filtre-accueil { display: inline-block; text-decoration: none; line-height: normal; }
+.site-header .logo-card, .site-header-compact .logo-card { background: transparent; box-shadow: none; padding: 0; border-radius: 0; }
+
+.site-header, .site-header-compact { background: #cfe6fb; }
+.site-header::after { background: var(--bg); }
+
+
+.site-header, .site-header-compact { background: #cfe6fb; }
+
+
+/* Aperçu : pied de page en bleu clair */
+.footer { background: #cfe6fb; color: var(--navy); }
+.footer-name { color: var(--navy); }
+.footer-small { opacity: 1; }
+.footer-mail .email-texte { color: var(--navy); }
+.footer-liens a { color: var(--blue); }
+.footer-liens a:hover { color: var(--navy); }
