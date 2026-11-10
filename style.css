@@ -826,3 +826,26 @@ h1, h2, h3 { letter-spacing: -.02em; }
 
 .aside-gazette::before { width: 90px; height: 90px; right: -34px; top: -34px; }
 .aside-gazette { padding-right: 56px; }
+
+/* Aperçu mobile : « Dernier numéro » sur toute la largeur au-dessus de la vignette et du titre */
+@media (max-width: 640px) {
+  .aside-gazette {
+    display: grid; grid-template-columns: auto 1fr; column-gap: 16px; row-gap: 6px;
+    align-items: center; padding: 16px 18px 18px;
+  }
+  .aside-gazette .gazette-corps, .aside-gazette .gazette-info { display: contents; }
+  .aside-gazette .gazette-badge { grid-column: 1 / -1; grid-row: 1; display: block; text-align: center; margin: 0; padding: 7px 12px; font-size: .8rem; }
+  .aside-gazette .aside-couv { grid-column: 1; grid-row: 2 / span 2; width: 84px; align-self: start; transform: rotate(-2deg); }
+  .aside-gazette h3 { grid-column: 2; grid-row: 2; align-self: end; font-size: 1.25rem; margin: 0; }
+  .aside-gazette .gazette-info p { grid-column: 2; grid-row: 3; align-self: start; margin: 0; font-size: .85rem; }
+  .aside-gazette .gazette-actions { grid-column: 1 / -1; grid-row: 4; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .aside-gazette .gazette-actions .btn { padding: 9px 14px; font-size: .82rem; }
+  .aside-gazette::before { width: 70px; height: 70px; right: -28px; top: -28px; }
+}
+
+
+/* Aperçu mobile : badge à la taille de son texte, soleil jaune remis */
+@media (max-width: 640px) {
+  .aside-gazette .gazette-badge { grid-column: 1 / -1; justify-self: start; text-align: left; display: inline-block; padding: 4px 12px; font-size: .8rem; }
+  .aside-gazette::before { display: block; width: 90px; height: 90px; right: -34px; top: -34px; }
+}
