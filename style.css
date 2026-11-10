@@ -786,20 +786,12 @@ h1, h2, h3 { letter-spacing: -.02em; }
   .intro-aside, .aside-gazette { min-width: 0; width: 100%; box-sizing: border-box; }
 }
 
-.site-header, .site-header-compact { background: #cfe6fb; }
-.site-header::after { background: var(--bg); }
 
 
-.site-header, .site-header-compact { background: #cfe6fb; }
 
 
-/* Aperçu : pied de page en bleu clair */
-.footer { background: #cfe6fb; color: var(--navy); }
-.footer-name { color: var(--navy); }
-.footer-small { opacity: 1; }
-.footer-mail .email-texte { color: var(--navy); }
-.footer-liens a { color: var(--blue); }
-.footer-liens a:hover { color: var(--navy); }
+/* Retour au bleu d'origine : en-tête et pied de page = bleu de l'encart gazette */
+.site-header, .site-header-compact, .footer { background: var(--navy); }
 
 .legal-tete { display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: 8px; }
 .legal-tete .pill { margin-bottom: 0; }
