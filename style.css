@@ -812,3 +812,25 @@ h1, h2, h3 { letter-spacing: -.02em; }
 .footer-liens .btn-contact:hover { color: #fff; }
 .viewer-accueil { background: var(--green); }
 .viewer-accueil:hover { background: var(--green-deep); }
+
+/* Aperçu : bienvenue + texte, puis encart gazette en dessous, puis le reste */
+.intro-grid { grid-template-columns: 1fr; gap: 20px; }
+.intro-texte { max-width: none; }
+.intro-aside { max-width: 760px; }
+.intro .intro-aside .aside-gazette { margin: 0; }
+
+/* Aperçu : encart gazette sur toute la largeur */
+.intro-aside { max-width: none; }
+.aside-gazette { padding: 22px 32px; gap: 28px; }
+.aside-gazette .gazette-corps { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.aside-gazette .gazette-info { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.aside-gazette .gazette-info h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
+.aside-gazette .gazette-info p { margin: 0; }
+.aside-gazette .gazette-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.aside-gazette .gazette-actions .btn { margin: 0; padding: 12px 22px; }
+.aside-couv { width: 96px; }
+.aside-gazette .gazette-corps { flex-direction: row; }
+@media (max-width: 640px) { .aside-gazette .gazette-corps { flex-direction: column; align-items: flex-start; } }
+
+.aside-gazette::before { width: 90px; height: 90px; right: -34px; top: -34px; }
+.aside-gazette { padding-right: 56px; }

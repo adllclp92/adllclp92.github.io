@@ -47,13 +47,13 @@
     var cover = pages0.length
       ? '<button class="aside-couv" type="button" data-doc="' + esc(cle0) + '" data-page="0" aria-label="Lire « ' + esc(g0.titre) + ' » en ligne"><img src="' + esc(url(pages0[0])) + '" alt="Couverture de ' + esc(g0.titre) + '"></button>'
       : "";
-    ig.innerHTML = cover + "<div><span class=\"gazette-badge\">Dernier numéro</span><h3>" + esc(g0.titre) + "</h3>" +
-      (infos0 ? "<p>" + infos0 + "</p>" : "") +
+    ig.innerHTML = cover + "<div class=\"gazette-corps\"><div class=\"gazette-info\"><span class=\"gazette-badge\">Dernier numéro</span><h3>" + esc(g0.titre) + "</h3>" +
+      (infos0 ? "<p>" + infos0 + "</p>" : "") + "</div><div class=\"gazette-actions\">" +
       (pages0.length
         ? '<button class="btn btn-primary" type="button" data-doc="' + esc(cle0) + '" data-page="0">Lire en ligne</button>'
         : '<a class="btn btn-primary" href="' + esc(url(g0.fichier)) + '" target="_blank" rel="noopener">Lire la gazette</a>') +
       (A.estPdf(g0.fichier) ? ' <a class="btn btn-outline" href="' + esc(url(g0.fichier)) + '" download>Télécharger (PDF)</a>' : "") +
-      ' <a class="btn btn-outline" href="archives.html">Accès aux archives</a></div>';
+      ' <a class="btn btn-outline" href="archives.html">Accès aux archives</a></div></div>';
     ig.hidden = false;
   } else {
     /* Pas de gazette en cours : l'accès aux archives reste proposé */
