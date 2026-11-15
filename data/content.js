@@ -28,9 +28,9 @@ window.SITE_DATA = {
       "date_archivage": "2026-11-15"
     },
     {
-      "titre": "Site Web de l'amicale et comment nous informer de vos problèmes",
+      "titre": "Aidez-nous à faire remonter les problèmes rencontrés",
       "date": "2026-11-15",
-      "description": "La déclaration de vos problèmes permet d'alimenter la Gazette de l'amicale qui est transmise au bailleur (siège social et antenne de Bagneux) et à la mairie (élu au logement) à chaque nouvelle édition.",
+      "description": "N'hésitez pas à nous signaler les problèmes que vous constatez. Vos signalements permettent d'alimenter la Gazette de l'Amicale.\nÀ chaque parution, cette Gazette est envoyée au bailleur (siège social et antenne de Bagneux) ainsi qu'à la mairie de Bagneux, afin que les difficultés signalées soient connues et suivies.",
       "id": "059f3064c4",
       "fichier": "affiches/20261109-affiche-infos-site-web-problemes.pdf",
       "archive": false,
