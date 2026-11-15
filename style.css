@@ -849,3 +849,8 @@ h1, h2, h3 { letter-spacing: -.02em; }
   .aside-gazette .gazette-badge { grid-column: 1 / -1; justify-self: start; text-align: left; display: inline-block; padding: 4px 12px; font-size: .8rem; }
   .aside-gazette::before { display: block; width: 90px; height: 90px; right: -34px; top: -34px; }
 }
+
+/* Pied de page : boutons empilés */
+.footer-boutons { display: flex; flex-direction: column; gap: 12px; align-items: stretch; text-align: center; }
+.btn-archives { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.75); box-shadow: none; text-decoration: none; }
+.btn-archives:hover { background: rgba(255,255,255,.14); color: #fff; }
