@@ -21,11 +21,23 @@
       "description": "",
       "id": "04ca454348",
       "fichier": "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026-v2.pdf",
-      "archive": false,
-      "ordre": 0,
+      "archive": true,
       "pages": [
         "affiches/20261210-affiche-assemblee-generale-du-5-nov-2026-v2-page1.jpg"
-      ]
+      ],
+      "date_archivage": "2026-11-15"
+    },
+    {
+      "titre": "Site Web de l'amicale et comment nous informer de vos problèmes",
+      "date": "2026-11-15",
+      "description": "La déclaration de vos problèmes permet d'alimenter la Gazette de l'amicale qui est transmise au bailleur (siège social et antenne de Bagneux) et à la mairie (élu au logement) à chaque nouvelle édition.",
+      "id": "059f3064c4",
+      "fichier": "affiches/20261109-affiche-infos-site-web-problemes.pdf",
+      "archive": false,
+      "pages": [
+        "affiches/20261109-affiche-infos-site-web-problemes-page1.jpg"
+      ],
+      "ordre": 0
     }
   ],
   "gazettes": [
