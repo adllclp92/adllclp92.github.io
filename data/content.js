@@ -120,7 +120,17 @@ window.SITE_DATA = {
     "complement": "",
     "maj": "2026-10-18"
   },
-  "importantes": [],
+  "importantes": [
+    {
+      "titre": "Bacs de recyclage à couvercle jaune",
+      "date": "2026-11-20",
+      "description": "",
+      "id": "dbdbd5beef",
+      "fichier": "importantes/affiche-sacs-transparents-a5-paysage.png",
+      "archive": false,
+      "ordre": 0
+    }
+  ],
   "registre_gazettes": {
     "e6f04c1f7c": "Gazette n°1",
     "e0f222d036": "Gazette n°2",
