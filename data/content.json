@@ -34,10 +34,10 @@
       "id": "059f3064c4",
       "fichier": "affiches/20261109-affiche-infos-site-web-problemes.pdf",
       "archive": false,
+      "ordre": 0,
       "pages": [
         "affiches/20261109-affiche-infos-site-web-problemes-page1.jpg"
-      ],
-      "ordre": 0
+      ]
     }
   ],
   "gazettes": [
